@@ -43,7 +43,7 @@
 <br>
 
 <div class="text-center">
-    <img src="bebekvoice.png" class="col-2" alt="logo">
+    <img src="img\icon.png" class="col-2" alt="logo">
 </div>
 
 <br>
