@@ -9,7 +9,7 @@
 <?php
 	if(isset($_GET['pesan'])){
 		if($_GET['pesan']=="gagal"){
-			echo "<div class='alert alert-danger'>Krede!</div>";
+			echo "<div class='alert alert-danger text-center'>Kredensial masukmu tak cocok dengan akun<br> dalam sistem kami!</div>";
 		}
 	}
 ?>
