@@ -6,10 +6,11 @@
     //require_once('db_login.php');
 
     //validasi inputan
+    error_reporting(0);
     if(isset($_POST["submit"])){
 
         $username = test_input($_POST['username']);
-        if($username == ''){
+        if(empty($username)){
             $error_username = "Username is required";
         }
 
@@ -38,16 +39,16 @@
         // }
 
     } 
-
+    ?>
+    
+    <?php    
     //menampilkan pesan gagal
     if(isset($_GET['pesan'])){
 		if($_GET['pesan']=="gagal"){
 			echo "<div class='alert'>Username dan Password tidak sesuai !</div>";
 		}
 	}
-
     ?>
-
 <br>
 
 <div class="text-center">
@@ -66,8 +67,8 @@
 
         <div class="form-group mb-3 col-auto">
             <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="Masukan Email..."value="<?php if(isset($username)) {echo $username;}?>">
-            <div class="error text-danger"><?php if(isset($error_username)) echo $error_username;?></div>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Masukan Email..." value="<?php if(isset($username)) {echo $username;}?>">
+            <div class="error text-danger"><?php if(!isset($error_username)) echo $error_username;?></div>
         </div>
 
         <div class="col-auto">
@@ -78,7 +79,7 @@
         <br>
 
         <div class="col-auto justify-content-md-end d-md-flex">
-            <button type="submit" name="submit" id ="submit" class="btn btn-outline-success">Login</button>
+            <button type="submit" name="submit" id ="submit" class="btn btn-outline-success" value="submit">Login</button>
         </div>
     </form>
 </div>
