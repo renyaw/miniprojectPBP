@@ -32,7 +32,7 @@
 
   <option value="0">Pilih Ruangan</option>
   <?php while ($data = $result->fetch_object()): ?>
-      <option value="<?php echo $data->noruangan ?>"><?php echo $data->nama ?></option>
+      <option value="<?php echo $data->noruang?>"><?php echo $data->nama ?></option>
   <?php endwhile;
   }
 
