@@ -136,28 +136,34 @@
           <div class="card">
                   <div class="card-header">Booking Room</div>
                   <div class="card-body">
-                      <form method="GET" autocomplete="on" action="">
+                      <form method="POST" autocomplete="on" action="">
                         <!-- ges ini nanti yang room dibikin dropdown ya? -->
                           <div class="form-group">
                               <label for="ruangan">Room Type</label>
-                              <select name="city" id="city" class="form-control" required>
-                                  
+                              <select class="form-select" name="type" id="type" onchange="getmodel(this.value)">
+                                <option value="0" selected>Select Type</option>
+                                <?php 
+                                  $query = "SELECT * FROM ruangan";
+                                  $result = $db->query($query);
+
+                                  if (!$result) {
+                                    die("Could not query the database: <br />" . $db->error);
+                                  }
+
+                                  while ($row = $result->fetch_object()) {
+                                    echo '<option value="' . $row->id . '">' . $row->nama . '</option>';
+                                  }
+
+                                  $result->free();
+                                  $db->close();
+                                ?>
                               </select>
                           </div>
                           <div class="form-group">
                               <label for="ruangan">Room Number</label>
-                              <select name="city" id="city" class="form-control" required>
-                                  
+                              <select class="form-select" name="model" id="model">              
+                                <option value="0" selected>Select Room Number</option>
                               </select>
-                          </div>
-                          <div class="form-group">
-                              <label for="name">Nama</label>
-                              <input type="text" class="form-control" id="name" name="name">
-                          </div>
-
-                          <div class="form-group">
-                              <label for="nama">Email</label>
-                              <input type="text" class="form-control" id="email" name="email">
                           </div>
 
                           <br>
