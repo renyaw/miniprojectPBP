@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
   <body>
@@ -40,14 +41,14 @@
     <!-- Table View -->
     <section id="reservasi">
         <div class="container">
-            <div class="row">
+            <div class="row text-center">
                 <div class="col">
                     <h2>Reservasi</h2>
                 </div>
             </div>
-            <div class="row">
+            <div class="row text-center">
                 <div class="col">
-                <table class="table">
+                <table class="table table-hover table-striped">
                     <tr>
                         <th>Nomor Pesanan</th>
                         <th>Ussername</th>
@@ -55,6 +56,37 @@
                         <th>Room Type</th>
                         <th>Room Number</th>
                     </tr>
+
+                    <?php
+                        // include our login information
+                        session_start(); //menginisialilasi session lalu akan diteruskan ke get dan post
+                        require_once('db_login.php'); // memanggil halaman
+                        
+                        // execute the query
+                        $query = " SELECT * FROM pelanggan ORDER BY id_pelanggan "; //Klausa ORDER BY digunakan untuk mengurutkan hasil-set dalam urutan menaik atau menurun
+                        $result = $db->query($query);
+                        if (!$result){
+                            die ("Could not the query the database: <br />" . $db->error ."<br>Query: " . $query);
+                        }
+
+                        // fetch and display the results
+                        $i = 1;
+                        while ($row = $result->fetch_object()){ // fetch_object-> mengembalikan baris saat ini dari kumpulan hasil sebagai objek atau keluarasnfungsi mengembalikan baris saat ini 
+                            echo '<tr>';
+                            echo '<td>' .$row->no_pesanan. '</td>';
+                            echo '<td>' .$row->username. '</td>';
+                            echo '<td>' .$row->tanggal_pesanan. '</td>';
+                            echo '<td>' .$row->jenis_ruangan. '</td>';
+                            echo '<td>' .$row->no_ruangan. '</td>';
+                            echo '</tr>';
+                            $i++;
+                        }
+                        echo '</table>';
+                        echo '<br />';
+                        echo 'Total Rows = ' .$result->num_rows;
+                        $result->free();
+                        $db->close();
+                    ?>
                 </div>
             </div>
         </div>
