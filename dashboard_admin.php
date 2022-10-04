@@ -9,11 +9,7 @@
   </head>
 
   <body>
-    <?php
-    	if($_SESSION['username']!="admin"){
-        header("location:login.php?pesan=bukanadmin");
-      }
-    ?>
+
     <!-- Navbar ye -->
     <nav class="navbar navbar-expand-lg fixed-top" style="background-color:#F1A661;">
       <div class="container">
