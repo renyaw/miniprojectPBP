@@ -9,6 +9,6 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 
-$login = mysqli_query($kon)
+$login = mysqli_query($koneksi);
 
 ?>
