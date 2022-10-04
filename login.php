@@ -5,10 +5,11 @@
     //session_start();
     require_once('db_login.php');
     ?>
+    
 <?php
 	if(isset($_GET['pesan'])){
 		if($_GET['pesan']=="gagal"){
-			echo "<div class='alert'>Username dan Password tidak sesuai !</div>";
+			echo "<div class='alert'> Username dan Password tidak sesuai !</div>";
 		}
 	}
 ?>
@@ -30,13 +31,13 @@
     
         <div class="form-group mb-3 col-auto">
             <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="Masukan username...">
+            <input type="text" class="form-control" id="username" name="username" placeholder="Masukan username..." value="">
             <small class="form-text text-danger" id="username_error"></small>
         </div>
 
         <div class="col-auto">
         <label for="inputPassword5" class="form-label">Password</label>
-            <input type="password" id="password" name="password" placeholder="Masukan Password..."class="form-control">
+            <input type="password" id="password" name="password" placeholder="Masukan Password..."class="form-control" value="">
             <small class="form-text text-danger" id="password_error"></small>
         </div>
 
