@@ -30,3 +30,32 @@ function resetError() {
             element.style.display = 'none'
         })
 }
+
+function callAjax(url, inner) {
+    const xmlHttp = getXMLHttpRequest();
+    xmlHttp.open("GET", url, true);
+  
+    xmlHttp.onreadystatechange = function () {
+      document.getElementById(inner).innerHTML =
+        '<img src="../img/ajax_loader.png" alt="ajax_loader" />';
+  
+      if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+        document.getElementById(inner).innerHTML = xmlHttp.responseText;
+      }
+  
+      return false;
+    };
+  
+    xmlHttp.send(null);
+}
+
+function getmodel(id_tipe) {
+    const inner = "model";
+    const url = `get_model.php?id_tipe=${id_tipe}`;
+  
+    if (id_tipe == "") {
+      document.getElementById(inner).innerHTML = "";
+    } else {
+      callAjax(url, inner);
+    }
+  }
