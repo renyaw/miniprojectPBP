@@ -23,18 +23,25 @@
   //   $db->close();
 ?>
 <?php 
-    require_once("db_login.php");
+  require_once("db_login.php");
 
-  if (isset($_GET["id"])) {
-      $id = $_GET["id"];
-      $result = $db->query("select * from ruang where id_tipe='$id'");
-?>
+  if (isset($_GET["id_tipe"])) {
+    $id_tipe = $_GET["id_tipe"];
 
-  <option value="0">Pilih Ruangan</option>
-  <?php while ($data = $result->fetch_object()): ?>
-      <option value="<?php echo $data->noruang?>"><?php echo $data->nama ?></option>
-  <?php endwhile;
+    $query = "SELECT * FROM ruang WHERE id_tipe='" . $id_tipe . "'";
+    $result = $db->query($query);
+
+    if (!$result) {
+      die("Could not query the database: <br />" . $db->error);
+    }
+
+    echo '<option value="" selected>Pilih Room</option>';
+    
+    while ($row = $result->fetch_object()) {
+      echo '<option value="' . $data->noruangan . '">' . $data->nama . '</option>';
+    }
+
+    $result->free();
+    $db->close();
   }
-
-
-  
+?>
