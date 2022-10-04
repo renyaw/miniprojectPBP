@@ -36,7 +36,8 @@ if($cek>0){
         header("location:bookroom.php");
     }
     else{
-        //
+		// alihkan ke halaman login kembali
+		header("location:login.php?pesan=gagal");
     }
 }
 ?>
