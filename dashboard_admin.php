@@ -10,10 +10,9 @@
 
   <body>
     <?php
-    
-    	// if($_SESSION['level']==""){
-      //   header("location:index.php?pesan=gagal");
-      // }
+    	if($_SESSION['level']==""){
+        header("location:login.php?pesan=bukanadmin");
+      }
     ?>
     <!-- Navbar ye -->
     <nav class="navbar navbar-expand-lg fixed-top" style="background-color:#F1A661;">

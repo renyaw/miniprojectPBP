@@ -12,6 +12,12 @@
 			echo "<div class='alert alert-danger text-center'>Kredensial masukmu tak cocok dengan akun<br> dalam sistem kami!</div>";
 		}
 	}
+
+    if(isset($_GET['pesan'])){
+		if($_GET['pesan']=="bukanadmin"){
+			echo "<div class='alert alert-danger text-center'>Anda Harus Login Sebagai Admin!</div>";
+		}
+	}
 ?>
 <br>
 
