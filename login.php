@@ -5,11 +5,11 @@
     //session_start();
     require_once('db_login.php');
     ?>
-    
+
 <?php
 	if(isset($_GET['pesan'])){
 		if($_GET['pesan']=="gagal"){
-			echo "<div class='alert alert-danger text-center'> Username atau Password tidak sesuai !</div>";
+			echo "<div class='alert alert-danger text-center'>Kredensial masukmu tak cocok dengan akun<br> dalam sistem kami!</div>";
 		}
 	}
 ?>

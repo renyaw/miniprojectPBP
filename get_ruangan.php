@@ -5,7 +5,7 @@
   if (isset($_GET["id_tipe"])) {
     $id_tipe = $_GET["id_tipe"];
 
-    $query = "SELECT * FROM model WHERE id_tipe='" . $id_tipe . "'";
+    $query = "SELECT * FROM ruang WHERE id_tipe='" . $id_tipe . "'";
     $result = $db->query($query);
 
     if (!$result) {
