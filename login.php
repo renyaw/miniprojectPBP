@@ -2,7 +2,7 @@
 
     <?php
 
-    session_start();
+    //session_start();
     require_once('db_login.php');
 
     //validasi inputan
@@ -60,19 +60,19 @@
 <div class="card">
 <div class="card-body">
 
-    <form method="POST" autocomplete="on" class="col 10" action=""></form>
+    <form method="POST" autocomplete="on" class="col 10" action="cek_login.php"></form>
 
     <br>
 
         <div class="form-group mb-3 col-auto">
             <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" name="username" value="<?php if(isset($username)) {echo $username;}?>">
+            <input type="text" class="form-control" id="username" name="username" placeholder="Masukan Email..."value="<?php if(isset($username)) {echo $username;}?>">
             <div class="error text-danger"><?php if(isset($error_username)) echo $error_username;?></div>
         </div>
 
         <div class="col-auto">
         <label for="inputPassword5" class="form-label">Password</label>
-            <input type="password" id="password" name="password" class="form-control">
+            <input type="password" id="password" name="password" placeholder="Masukan Password..."class="form-control">
         </div>
 
         <br>
