@@ -139,13 +139,13 @@
                       <form method="GET" autocomplete="on" action="">
                         <!-- ges ini nanti yang room dibikin dropdown ya? -->
                           <div class="form-group">
-                              <label for="ruangan">Type</label>
+                              <label for="ruangan">Room Type</label>
                               <select name="city" id="city" class="form-control" required>
                                   
                               </select>
                           </div>
                           <div class="form-group">
-                              <label for="ruangan">Room</label>
+                              <label for="ruangan">Room Number</label>
                               <select name="city" id="city" class="form-control" required>
                                   
                               </select>
