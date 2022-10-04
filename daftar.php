@@ -75,7 +75,7 @@
           </div>
         </div>
       </div>
-      <div class="flex-1 bg-indigo-100 text-center hidden lg:flex">
+      <div class="flex-1 text-center hidden lg:flex" style="background-color:#FDEEDC;">
         <div
           class="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat">
           <img src="img\icon.png">
