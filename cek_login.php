@@ -21,7 +21,10 @@ if($cek>0){
     $data=mysqli_fetch_assoc($login);
 
     //cek jika user login sebagai admin
-    if($data['username']=="admin"){
+    if($data['username']==""){
+        header("location:login.php?pesan=gagal");
+    }
+    else if($data['username']=="admin"){
 
         //buat session login dan username
         $_SESSION['username'] = $username;
