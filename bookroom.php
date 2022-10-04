@@ -140,11 +140,10 @@
                         <!-- ges ini nanti yang room dibikin dropdown ya? -->
                           <div class="form-group">
                               <label for="ruangan">Room Type</label>
-                              <select class="form-select" name="type" id="type" onchange="getmodel(this.value)">
+                              <select class="form-select" name="type" id="type" onchange="getModel()">
                                 <option value="0" selected>Select Type</option>
-                                <?php 
-                                  $query = "SELECT * FROM ruangan";
-                                  $result = $db->query($query);
+                                <?php
+                                  $result = $db->query('select * from ruang'); 
 
                                   if (!$result) {
                                     die("Could not query the database: <br />" . $db->error);
