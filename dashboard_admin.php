@@ -51,7 +51,7 @@
                 <table class="table table-hover table-striped">
                     <tr>
                         <th>Nomor Pesanan</th>
-                        <th>Ussername</th>
+                        <th>Username</th>
                         <th>Tanggal Pemesanan</th>
                         <th>Room Type</th>
                         <th>Room Number</th>
@@ -63,7 +63,7 @@
                         require_once('db_login.php'); // memanggil halaman
                         
                         // execute the query
-                        $query = " SELECT * FROM pelanggan ORDER BY id_pelanggan "; //Klausa ORDER BY digunakan untuk mengurutkan hasil-set dalam urutan menaik atau menurun
+                        $query = "SELECT * FROM pesanan ORDER BY no_pesanan "; //Klausa ORDER BY digunakan untuk mengurutkan hasil-set dalam urutan menaik atau menurun
                         $result = $db->query($query);
                         if (!$result){
                             die ("Could not the query the database: <br />" . $db->error ."<br>Query: " . $query);
