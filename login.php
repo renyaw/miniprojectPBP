@@ -13,7 +13,7 @@
             $error_username = "Username is required";
         }
 
-       $password = test_input($_POST['password']);
+        $password = test_input($_POST['password']);
         if($password == ''){
             $error_password = "Password is required";
         }
