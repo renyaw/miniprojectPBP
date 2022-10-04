@@ -38,7 +38,7 @@
     echo '<option value="" selected>Pilih Room</option>';
     
     while ($row = $result->fetch_object()) {
-      echo '<option value="' . $data->noruangan . '">' . $data->nama . '</option>';
+      echo '<option value="' . $row->id . '">' . $row->noruang . '</option>';
     }
 
     $result->free();
