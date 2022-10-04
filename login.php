@@ -7,10 +7,9 @@
     ?>
 
 <?php
-    header("Refresh:0; url=login.php");
 	if(isset($_GET['pesan'])){
 		if($_GET['pesan']=="gagal"){
-			echo "<div class='alert alert-danger'> Data Yang Dimasukan Salah !</div>";
+			echo "<div class='alert alert-danger'>Krede!</div>";
 		}
 	}
 ?>
