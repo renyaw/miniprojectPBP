@@ -3,7 +3,7 @@
     <?php
 
     //session_start();
-    require_once('db_login.php');
+    //require_once('db_login.php');
 
     //validasi inputan
     if(isset($_POST["submit"])){
@@ -60,7 +60,7 @@
 <div class="card">
 <div class="card-body">
 
-    <form method="POST" autocomplete="on" class="col 10" action="cek_login.php"></form>
+    <form method="POST" autocomplete="on" class="col 10" action="cek_login.php">
 
     <br>
 
@@ -78,9 +78,9 @@
         <br>
 
         <div class="col-auto justify-content-md-end d-md-flex">
-            <button type="submit" class="btn btn-outline-success">Login</button>
+            <button type="submit" name="submit" id ="submit" class="btn btn-outline-success">Login</button>
         </div>
-
+    </form>
 </div>
 </div>
 </div>
