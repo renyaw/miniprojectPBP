@@ -141,14 +141,21 @@
                           <div class="form-group">
                               <label for="ruangan">Room Type</label>
                               <select class="form-select" name="type" id="type" onchange="">
-                                <option value="0" selected>Select Type</option>
-                                
+                                <option value="0" selected>-- Select Type --</option>
+                                <?php
+                                require_once('db_login.php');
+                                    $result = $db->query('select * from tipe');
+
+                                    while ($data = $result->fetch_object()):
+                                ?>
+                                    <option value="<?php echo $data->id_tipe ?>"><?php echo $data->nama_ruang ?></option>
+                                <?php endwhile ?>
                               </select>
                           </div>
                           <div class="form-group">
                               <label for="ruangan">Room Number</label>
-                              <select class="form-select" name="number" id="number">              
-                                <option value="0" selected>Select Room Number</option>
+                              <select class="form-select" name="ruangan" id="ruangan">              
+                                <option value="0" selected>-- Select Room Number --</option>
                               </select>
                           </div>
 
