@@ -8,7 +8,10 @@ require_once('db_login.php');
 $username = $_POST['username'];
 $password = $_POST['password'];
 
+//menyeleksi data user
+$login = mysqli_query($db,"select from akun where username='$username' and password='$password'");
 
-//$login = mysqli_query($koneksi);
+//menghitung jumlah data yang ditemukan
+$cek = mysqli_num_rows($login)
 
 ?>
