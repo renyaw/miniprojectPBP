@@ -10,7 +10,7 @@
 
   <body>
     <?php
-    	if($_SESSION['level']==""){
+    	if($_SESSION['username']!="admin"){
         header("location:login.php?pesan=bukanadmin");
       }
     ?>
