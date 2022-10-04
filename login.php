@@ -37,7 +37,7 @@
         <br>
 
         <div class="col-auto justify-content-md-end d-md-flex">
-            <button type="submit" name="submit" value="submit" class="btn btn-primary">Login</button>
+            <button type="submit" name="submit" value="submit" class="btn btn-outline-success">Login</button>
         </div>
     </form>
     <script src="script.js"></script>
