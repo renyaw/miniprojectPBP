@@ -5,6 +5,7 @@
     session_start();
     require_once('db_login.php');
 
+    //validasi inputan
     if(isset($_POST["submit"])){
 
         $username = test_input($_POST['username']);
