@@ -6,6 +6,7 @@
     <title>Bookroom</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
   </head>
   <body id="home">
     <!-- Navbar ye -->
@@ -140,7 +141,7 @@
                         <!-- ges ini nanti yang room dibikin dropdown ya? -->
                           <div class="form-group">
                               <label for="ruangan">Room Type</label>
-                              <select class="form-select" name="type" id="type" onchange="">
+                              <select class="form-select" name="tipe" id="tipe" onchange="">
                                 <option value="0" selected>-- Select Type --</option>
                                 <?php
                                 require_once('db_login.php');
@@ -152,6 +153,7 @@
                                 <?php endwhile ?>
                               </select>
                           </div>
+                          
                           <div class="form-group">
                               <label for="ruangan">Room Number</label>
                               <select class="form-select" name="ruangan" id="ruangan">              
