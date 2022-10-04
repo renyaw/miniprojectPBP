@@ -5,7 +5,13 @@
     //session_start();
     require_once('db_login.php');
     ?>
-
+<?php
+	if(isset($_GET['pesan'])){
+		if($_GET['pesan']=="gagal"){
+			echo "<div class='alert'>Username dan Password tidak sesuai !</div>";
+		}
+	}
+?>
 <br>
 
 <div class="text-center">
@@ -37,7 +43,7 @@
         <br>
 
         <div class="col-auto justify-content-md-end d-md-flex">
-            <button type="submit" name="submit" value="submit" class="btn btn-primary">Login</button>
+            <button type="submit" name="submit" value="submit" class="btn btn-outline-success">Login</button>
         </div>
     </form>
     <script src="script.js"></script>
