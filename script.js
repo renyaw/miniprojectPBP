@@ -1,7 +1,7 @@
 var username = document.forms.form.username;
 var password = document.forms.form.password;
-
-
+var tipe = document.forms.form.tipe;
+var ruang = document.forms.form.ruang;
 function submitLogin() {
     var valid = true
 
@@ -48,6 +48,18 @@ function callAjax(url, inner) {
   
     xmlHttp.send(null);
 }
+
+tipe.onchange = function () {
+  var xhr = new XMLHttpRequest();
+
+  xhr.open("GET", "get_ruangan.php?id=" + tipe.value);
+
+  xhr.onload = function () {
+      ruang.innerHTML = xhr.responseText;
+  };
+
+  xhr.send();
+};
 
 function getmodel(id_tipe) {
     const inner = "model";
