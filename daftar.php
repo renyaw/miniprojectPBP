@@ -66,7 +66,7 @@
                   <path d="M20 8v6M23 11h-6" />
                 </svg>
                 <span class="ml-3">
-                  Sign Up
+                  Daftar
                 </span>
               </button>
               <p class="mt-6 text-xs text-gray-600 text-center">
@@ -79,8 +79,8 @@
       <div class="flex-1 bg-indigo-100 text-center hidden lg:flex">
         <div
           class="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat"
-          style="background-image: url('https://storage.googleapis.com/devitary-image-host.appspot.com/15848031292911696601-undraw_designer_life_w96d.svg');"
-        ></div>
+          <img src="img\icon.png" alt="gambar"></img>
+        </div>
       </div>
     </div>
     <div class="REMOVE-THIS-ELEMENT-IF-YOU-ARE-USING-THIS-PAGE hidden treact-popup fixed inset-0 flex items-center justify-center" style="background-color: rgba(0,0,0,0.3);">
