@@ -141,7 +141,7 @@
                         <!-- ges ini nanti yang room dibikin dropdown ya? -->
                           <div class="form-group">
                               <label for="ruangan">Room Type</label>
-                              <select class="form-select" name="tipe" id="tipe" onchange="getroom">
+                              <select class="form-select" name="tipe" id="tipe" onchange="getroom(this.value)">
                                 <option value="0" selected>-- Select Type --</option>
                                 <?php
                                 require_once('db_login.php');
