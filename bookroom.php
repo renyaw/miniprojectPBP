@@ -141,7 +141,7 @@
                         <!-- ges ini nanti yang room dibikin dropdown ya? -->
                           <div class="form-group">
                               <label for="ruangan">Room Type</label>
-                              <select class="form-select" name="tipe" id="tipe" onchange="">
+                              <select class="form-select" name="tipe" id="tipe" onchange="getroom">
                                 <option value="0" selected>-- Select Type --</option>
                                 <?php
                                 require_once('db_login.php');
@@ -162,7 +162,7 @@
                           </div>
 
                           <br>
-                          <button type="button" class="btn btn-outline-success" onclick="add_customer_get()" class="button">Submit</button><br><br>
+                          <button type="button" class="btn btn-outline-success" onclick="" class="button">Submit</button><br><br>
                       </form>
                       <div id="add_response"></div>
                   </div>

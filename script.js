@@ -61,8 +61,8 @@ tipe.onchange = function () {
   xhr.send();
 };
 
-function getmodel(id_tipe) {
-    const inner = "model";
+function getroom(id_tipe) {
+    const inner = "tipe";
     const url = `get_model.php?id_tipe=${id_tipe}`;
   
     if (id_tipe == "") {
