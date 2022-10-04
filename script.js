@@ -63,7 +63,7 @@ tipe.onchange = function () {
 
 function getroom(id_tipe) {
     const inner = "tipe";
-    const url = `get_model.php?id_tipe=${id_tipe}`;
+    const url = `get_ruangan.php?id_tipe=${id_tipe}`;
   
     if (id_tipe == "") {
       document.getElementById(inner).innerHTML = "";
