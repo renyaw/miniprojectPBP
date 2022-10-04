@@ -1,7 +1,7 @@
 <?php
 
 $db_host = 'localhost';
-$db_database = 'karaoke4okt';
+$db_database = 'karaoke';
 $db_username = 'root';
 $db_password = '';
 
