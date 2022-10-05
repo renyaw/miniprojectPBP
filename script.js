@@ -95,6 +95,7 @@ function cekDaftar(){
   }
   if(password.value != password1.value){
     error('conpass','Password tidak sesuai')
+    valid = false;
   }
   return valid;
 
