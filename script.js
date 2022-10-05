@@ -95,8 +95,7 @@ function cekdaftar(){
     error('conpass','Password tidak sesuai')
   }
   return valid;
-
-
+  
 }
 
 function hideError(id) {

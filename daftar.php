@@ -50,41 +50,41 @@
                           endif;
                         }
                       ?>
-                        <form method="POST" name="form" autocomplete="on" onsubmit="return cekdaftar()" action="">
+                        <form method="POST" name="form" onsubmit="return cekdaftar()" action="">
                           <!-- ges ini nanti yang room dibikin dropdown ya? -->
                             <div class="form-group">
-                                <label for="tipe">Nama Lengkap</label>
-                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" value="">
+                                <label for="nama">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" >
                                 <small class="form-text text-danger" id="nama_error"></small>
                             </div>
                             <br>
                             <div class="form-group">
-                                <label for="tipe">Email</label>
-                                <input type="text" class="form-control" id="email" name="email" placeholder="Masukkan Email" value="">
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Masukkan Email">
                                 <small class="form-text text-danger" id="email_error"></small>
                                 <small class="form-text text-success" id="email_success" style="display: none">Email tersedia</small>
                             </div>
                             <br>
                             <div class="form-group">
-                                <label for="tipe">Username</label>
-                                <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan usernamename" value="">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan usernamename">
                                 <small class="form-text text-danger" id="username_error"></small>
                                 <small class="form-text text-success" id="username_success" style="display: none">Username tersedia</small>
                             </div>
                             <br>
                             <div class="form-group">
-                                <label for="tipe">Password</label>
-                                <input type="text" class="form-control" id="password" name="password"  placeholder="Masukkan Password" value="">
+                                <label for="password">Password</label>
+                                <input type="text" class="form-control" id="password" name="password"  placeholder="Masukkan Password">
                                 <small class="form-text text-danger" id="password_error"></small>
                             </div>
                             <br>
                             <div class="form-group">
                                 <label for="tipe">Confirm Password</label>
-                                <input type="text" class="form-control" id="conpass" name="conpass" placeholder="Masukkan Ulang Password" value="">
+                                <input type="text" class="form-control" id="conpass" name="conpass" placeholder="Masukkan Ulang Password" >
                                 <small class="form-text text-danger" id="conpass_error"></small>
                             </div>
                             <br>
-                            <button type="submit" class="btn btn-outline-success" name="submit" class="button">Submit</button><br><br>
+                            <button type="submit" class="btn btn-primary" name="submit">Submit</button><br><br>
                         </form>
                         
                     </div>
