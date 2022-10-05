@@ -52,7 +52,7 @@
 
   if (isset($_GET['id'])) {
       $id = $_GET['id'];
-      $result = $db->query("select * from ruang where id_tipe='$id'");
+      $result = $db->query("SELECT * from ruang WHERE id_tipe='$id'");
 ?>
 
   <option value="0">Pilih Ruangan</option>
