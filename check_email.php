@@ -2,7 +2,7 @@
 
 require_once('db_login.php');
 
-if (! isset($_GET['email'])) {
+if (!isset($_GET['email'])) {
     echo false;
 } else {
     $email = test_input($_GET['email']);
