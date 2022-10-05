@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body id="home">
+    <?php
+    //Cek apakah sudah login atau belum
+    session_start();
+    if(empty($_SESSION['username'])){
+      header('Location:login.php?pesan=belumlogin');
+    }
+    echo "logindengan" .$_SESSION['username'];
+    ?>
     <!-- Navbar ye -->
     <nav class="navbar navbar-expand-lg fixed-top" style="background-color:#F1A661;">
       <div class="container">
