@@ -133,24 +133,6 @@ email.onkeyup = function () {
   xhr.send()
 }
 
-username.onkeyup = function () {
-  var success = document.getElementById('username_success')
-  var xhr = new XMLHttpRequest();
-
-  xhr.open('GET', 'check_username.php?username=' + username.value)
-
-  xhr.onload = function () {
-      if (xhr.responseText == false) {
-          error('username', 'Username sudah dipakai')
-          success.style.display = 'none'
-      } else {
-          hideError('username')
-          success.style.display = 'block'
-      }
-  }
-
-  xhr.send()
-}
 
 /*function getroom(id_tipe) {
     const inner = "tipe";
