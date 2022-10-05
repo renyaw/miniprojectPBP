@@ -61,7 +61,7 @@ tipe.onchange = function () {
   xhr.send();
 };
 
-function getroom(id_tipe) {
+/*function getroom(id_tipe) {
     const inner = "tipe";
     const url = `get_ruangan.php?id_tipe=${id_tipe}`;
   
@@ -71,3 +71,4 @@ function getroom(id_tipe) {
       callAjax(url, inner);
     }
   }
+*/
