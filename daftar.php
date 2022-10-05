@@ -1,94 +1,82 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <link
-      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width,initial-scale=1,maximum-scale=1"
-    />
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-      }
-    </style>
-    <script
-      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js"
-      defer
-    ></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bookroom</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="daftar.css">
   </head>
-  <body class="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
-    <div
-      class="max-w-screen-xl m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1"
-    >
-      <div class="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
-        <div class=" flex flex-col items-center">
-            <div class="mx-auto max-w-xs">
-             <input
-                class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                type="nama"
-                placeholder="Nama"
-              />
-              <input
-                class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
-                type="email"
-                placeholder="Email"
-              />
-              <input
-                class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
-                type="username"
-                placeholder="Username"
-              />
-              <input
-                class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
-                type="password"
-                placeholder="Password"
-              />
-              <button
-                class="mt-5 tracking-wide font-semibold bg-green-500 text-gray-100 w-full py-4 rounded-lg hover:bg-green-800 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
-              >
-                <svg
-                  class="w-6 h-6 -ml-2"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-                  <circle cx="8.5" cy="7" r="4" />
-                  <path d="M20 8v6M23 11h-6" />
-                </svg>
-                <span class="ml-3">
-                  Daftar
-                </span>
-              </button>
-              <p class="mt-6 text-xs text-gray-600 text-center">
-                I agree to abide Bebek Voice's Terms
-              </p>
+  <body>
+    <section style="background-color: #F1A661;">
+    <div class="container">
+      <div class="row d-flex justify-content-center h-100">
+        <div class="col col-xl-10">
+          <div class="card" style="border-radius: 1rem;">
+            <div class="row g-0">
+              <div class="col-md-6 col-lg-5 d-none d-md-block">
+                <img src="img\icon.png"
+                  alt="icon" class="justify-content-center" />
+              </div>
+              <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                <div class="card-body p-4 p-lg-5 text-black">
+                  <form>
+                    <div class="d-flex align-items-center pb-1">
+                      <i class="fas fa-cubes fa-2x" style="color:#FDEEDC;"></i>
+                      <span class="h1 fw-bold mb-0">Bebek Voice</span>
+                    </div>
+                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Buat Akun</h5>
+                    <div class="row justify-content-center">
+          <div class="">
+            <div class="card">
+                    <div class="card-body">
+                        <form method="POST" name="form" autocomplete="on" action="">
+                          <!-- ges ini nanti yang room dibikin dropdown ya? -->
+                            <div class="form-group">
+                                <label for="tipe">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" value="">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="tipe">Email</label>
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Masukkan Email" value="">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="tipe">Username</label>
+                                <input type="text" class="form-control" id="user" name="user" placeholder="Masukkan Username" value="">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="tipe">Password</label>
+                                <input type="text" class="form-control" id="pass" name="pass" placeholder="Masukkan Password" value="">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="tipe">Confirm Password</label>
+                                <input type="text" class="form-control" id="conpass" name="conpass" placeholder="Masukkan Ulang Password" value="">
+                            </div>
+                            <br>
+                            <button type="button" class="btn btn-outline-success" onclick="" class="button">Submit</button><br><br>
+                        </form>
+                        
+                    </div>
+                </div>
+          </div>
+        </div>
+        <p class=" pb-lg-2" style="color: #393f81;">Punya Akun? <a href="#login.php"style="color: #393f81;">Login Di Sini</a></p>
+
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="flex-1 text-center hidden lg:flex" style="background-color:#FDEEDC;">
-        <div
-          class="m-12 xl:m-40 w-full bg-contain bg-center bg-no-repeat">
-          <img src="img\icon.png">
-        </div>
-      </div>
     </div>
-    <div class="REMOVE-THIS-ELEMENT-IF-YOU-ARE-USING-THIS-PAGE hidden treact-popup fixed inset-0 flex items-center justify-center" style="background-color: rgba(0,0,0,0.3);">
-        <div class="max-w-lg p-8 sm:pb-4 bg-white rounded shadow-lg text-center sm:text-left">
-          <div class="mt-8 pt-8 sm:pt-4 border-t -mx-8 px-8 flex flex-col sm:flex-row justify-end leading-relaxed">
-            <button class="close-treact-popup px-8 py-3 sm:py-2 rounded border border-gray-400 hover:bg-gray-200 transition duration-300">Close</button>
-            <a class="font-bold mt-4 sm:mt-0 sm:ml-4 px-8 py-3 sm:py-2 rounded bg-purple-700 text-gray-100 hover:bg-purple-900 transition duration-300 text-center" href="https://treact.owaiskhan.me" target="_blank">See Treact</a>
-          </div>
-        </div>
-      </div>
+  </section>
+    
+    <script src="ajax.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>
 </html>
