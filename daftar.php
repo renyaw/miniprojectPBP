@@ -50,7 +50,7 @@
                           endif;
                         }
                       ?>
-                        <form method="POST" name="form" onsubmit="return cekdaftar()" action="">
+                        <form method="POST" name="form" onsubmit="return cekdaftar()">
                           <!-- ges ini nanti yang room dibikin dropdown ya? -->
                             <div class="form-group">
                                 <label for="nama">Nama Lengkap</label>
