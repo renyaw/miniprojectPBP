@@ -35,10 +35,11 @@
                           $nama = test_input($_POST['nama']);
                           $email = test_input($_POST['email']);
                           $username = test_input($_POST['username']);
-                          $password = test_input($_POST['pass']);
+                          $password = test_input($_POST['password']);
 
 
-                          $result = $db->query("INSERT INTO mahasiswa(nama, nim, email, jenis_kelamin, alamat, id_departemen, id_jurusan) VALUES('$nama', '$nim', '$email', '$jenis_kelamin', '$alamat', '$departemen', '$jurusan')");
+                          $result = "INSERT INTO akun (username, password) VALUES('$username', '$password');";
+
 
                           if ($result):
                           ?>
@@ -67,7 +68,7 @@
                             <br>
                             <div class="form-group">
                                 <label for="username">Username</label>
-                                <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan usernamename">
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username">
                                 <small class="form-text text-danger" id="username_error"></small>
                                 <small class="form-text text-success" id="username_success" style="display: none">Username tersedia</small>
                             </div>
@@ -84,7 +85,7 @@
                                 <small class="form-text text-danger" id="conpass_error"></small>
                             </div>
                             <br>
-                            <button type="submit" class="btn btn-primary" name="submit">Submit</button><br><br>
+                            <button type="submit" class="btn btn-outline-success" name="submit" value="submit">Submit</button><br><br>
                         </form>
                         <script src="script.js"></script>
                         

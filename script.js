@@ -4,6 +4,7 @@ var tipe = document.forms.form.tipe;
 var ruang = document.forms.form.ruang;
 var email = document.forms.form.email;
 var password1 = document.forms.form.conpass;
+var nama = document.forms.form.nama;
 
 function submitLogin() {
     var valid = true
@@ -95,7 +96,7 @@ function cekdaftar(){
     error('conpass','Password tidak sesuai')
   }
   return valid;
-  
+
 }
 
 function hideError(id) {
@@ -135,7 +136,7 @@ username.onkeyup = function () {
   var success = document.getElementById('username_success')
   var xhr = new XMLHttpRequest();
 
-  xhr.open('GET', 'check_email.php?username=' + username.value)
+  xhr.open('GET', 'check_username.php?username=' + username.value)
 
   xhr.onload = function () {
       if (xhr.responseText == false) {
