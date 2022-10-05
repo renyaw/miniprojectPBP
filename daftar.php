@@ -40,7 +40,7 @@
 
 
                           $result = "INSERT INTO akun (username, password) VALUES('$username', '$password');";
-                          $result .= "INSERT INTO pelanggan VALUES(NULL, '$nama', '$email');";
+                          $result .= "INSERT INTO pelanggan VALUES(NULL, '$nama', '$email')";
 
                           if ($db->multi_query($result)== true):
                           ?>
