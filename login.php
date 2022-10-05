@@ -7,15 +7,23 @@
     ?>
 
 <?php
+    //pesan gagal
 	if(isset($_GET['pesan'])){
 		if($_GET['pesan']=="gagal"){
 			echo "<div class='alert alert-danger text-center'>Kredensial masukmu tak cocok dengan akun<br> dalam sistem kami!</div>";
 		}
 	}
-
+    //pesan login tidak sebagai admin
     if(isset($_GET['pesan'])){
 		if($_GET['pesan']=="bukanadmin"){
 			echo "<div class='alert alert-danger text-center'>Anda Harus Login Sebagai Admin!</div>";
+		}
+	}
+
+    //pesan belum login
+    if(isset($_GET['pesan'])){
+		if($_GET['pesan']=="belumlogin"){
+			echo "<div class='alert alert-danger text-center'>Mohon Login Terlebih Dahulu!</div>";
 		}
 	}
 ?>
