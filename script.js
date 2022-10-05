@@ -59,7 +59,7 @@ tipe.onchange = function () {
   };
 
   xhr.send();
-};
+}
 
 /*function getroom(id_tipe) {
     const inner = "tipe";

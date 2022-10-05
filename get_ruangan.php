@@ -1,4 +1,3 @@
-<script type="text/javascript" src="script.js"></script>
 <?php
 //kode feli
   // require_once("db_login.php");
