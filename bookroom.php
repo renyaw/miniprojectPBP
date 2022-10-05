@@ -140,8 +140,8 @@
                       <form method="POST" autocomplete="on" action="">
                         <!-- ges ini nanti yang room dibikin dropdown ya? -->
                           <div class="form-group">
-                              <label for="ruangan">Room Type</label>
-                              <select class="form-select" name="tipe" id="tipe" onchange="getroom(this.value)">
+                              <label for="tipe">Room Type</label>
+                              <select class="form-control" name="tipe" id="tipe">
                                 <option value="0" selected>-- Select Type --</option>
                                 <?php
                                 require_once('db_login.php');

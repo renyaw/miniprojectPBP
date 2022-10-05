@@ -39,7 +39,7 @@
   //   echo '<option value="" selected>Pilih Room</option>';
     
   //   while ($data = $result->fetch_object()) {
-  //     echo '<option value="' . $data->id . '">' . $data->noruang . '</option>';
+  //     echo '<option value="' . $data->id_tipe . '">' . $data->no_ruang . '</option>';
   //   }
 
   //   $result->free();

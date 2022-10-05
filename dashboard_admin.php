@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <?php
+    session_start();
+    // if($_session['username']!='admin'){
+    //   header('Location:login.php?pesan=bukanadmin');
+    // }
+    echo $SESSION['username'];
+    ?>
     <!-- Navbar ye -->
     <nav class="navbar navbar-expand-lg fixed-top" style="background-color:#F1A661;">
       <div class="container">
@@ -60,7 +67,7 @@
 
                     <?php
                         // include our login information
-                        session_start(); //menginisialilasi session lalu akan diteruskan ke get dan post
+                        //session_start(); //menginisialilasi session lalu akan diteruskan ke get dan post
                         require_once('db_login.php'); // memanggil halaman
                         
                         // execute the query
