@@ -26,7 +26,6 @@
               </div>
               <div class="col-md-6 col-lg-7 d-flex align-items-center">
                 <div class="card-body p-4 p-lg-5 text-black">
-                  <form>
                     <div class="d-flex align-items-center pb-1">
                       <i class="fas fa-cubes fa-2x" style="color:#FDEEDC;"></i>
                       <span class="h1 fw-bold mb-0">Bebek Voice</span>
@@ -35,52 +34,52 @@
                     <div class="row justify-content-center">
           <div class="">
             <div class="card">
-                    <div class="card-body">
-                      <form method="POST" autocomplete="on" name="form" onsubmit="return cekDaftar()" action="cek_daftar.php">
-                        <!-- ges ini nanti yang room dibikin dropdown ya? -->
-                          <div class="form-group">
-                              <label for="nama">Nama Lengkap</label>
-                              <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" >
-                              <small class="form-text text-danger" id="nama_error"></small>
-                          </div>
-                          <br>
+                <div class="card-body">
+                  <form method="POST" autocomplete="on" name="form" onsubmit="return cekDaftar()" action="cek_daftar.php">
+                    <!-- ges ini nanti yang room dibikin dropdown ya? -->
+                      <div class="form-group">
+                          <label for="nama">Nama Lengkap</label>
+                          <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" >
+                          <small class="form-text text-danger" id="nama_error"></small>
+                      </div>
+                      <br>
 
-                          <div class="form-group">
-                              <label for="email">Email</label>
-                              <input type="text" class="form-control" id="email" name="email" placeholder="Masukkan Email">
-                              <small class="form-text text-danger" id="email_error"></small>
-                              <small class="form-text text-success" id="email_success" style="display: none">Email tersedia</small>
-                          </div>
-                          <br>
+                      <div class="form-group">
+                          <label for="email">Email</label>
+                          <input type="text" class="form-control" id="email" name="email" placeholder="Masukkan Email">
+                          <small class="form-text text-danger" id="email_error"></small>
+                          <small class="form-text text-success" id="email_success" style="display: none">Email tersedia</small>
+                      </div>
+                      <br>
 
-                          <div class="form-group">
-                              <label for="username">Username</label>
-                              <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username">
-                              <small class="form-text text-danger" id="username_error"></small>
-                              <small class="form-text text-success" id="username_success" style="display: none">Username tersedia</small>
-                          </div>
-                          <br>
+                      <div class="form-group">
+                          <label for="username">Username</label>
+                          <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username">
+                          <small class="form-text text-danger" id="username_error"></small>
+                          <small class="form-text text-success" id="username_success" style="display: none">Username tersedia</small>
+                      </div>
+                      <br>
 
-                          <div class="form-group">
-                              <label for="password">Password</label>
-                              <input type="password" class="form-control" id="password" name="password"  placeholder="Masukkan Password">
-                              <small class="form-text text-danger" id="password_error"></small>
-                          </div>
-                          <br>  
+                      <div class="form-group">
+                          <label for="password">Password</label>
+                          <input type="password" class="form-control" id="password" name="password"  placeholder="Masukkan Password">
+                          <small class="form-text text-danger" id="password_error"></small>
+                      </div>
+                      <br>  
 
-                          <div class="form-group">
-                              <label for="tipe">Confirm Password</label>
-                              <input type="password" class="form-control" id="conpass" name="conpass" placeholder="Masukkan Ulang Password" >
-                              <small class="form-text text-danger" id="conpass_error"></small>
-                          </div>
+                      <div class="form-group">
+                          <label for="tipe">Confirm Password</label>
+                          <input type="password" class="form-control" id="conpass" name="conpass" placeholder="Masukkan Ulang Password" >
+                          <small class="form-text text-danger" id="conpass_error"></small>
+                      </div>
 
-                          <br>
-                          <div class="col-auto justify-content-md-end d-md-flex">
-                            <button type="submit" name="submit" value="submit" class="btn btn-outline-success">Daftar</button>
-                          </div>
-                      </form>
-                        
-                    </div>
+                      <br>
+                      <div class="col-auto justify-content-md-end d-md-flex">
+                        <button type="submit" name="submit" value="submit" class="btn btn-outline-success">Daftar</button>
+                      </div>
+                  </form>
+                    
+                </div>
                 </div>
           </div>
         </div>
