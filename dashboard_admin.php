@@ -11,10 +11,10 @@
   <body>
     <?php
     session_start();
-    // if($_session['username']!='admin'){
-    //   header('Location:login.php?pesan=bukanadmin');
-    // }
-    echo $SESSION['username'];
+    if($_SESSION['username']!='admin'){
+      header('Location:login.php?pesan=bukanadmin');
+    }
+    
     ?>
     <!-- Navbar ye -->
     <nav class="navbar navbar-expand-lg fixed-top" style="background-color:#F1A661;">
