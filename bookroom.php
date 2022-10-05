@@ -155,9 +155,9 @@
                           </div>
                           
                           <div class="form-group">
-                              <label for="ruangan">Room Number</label>
-                              <select class="form-select" name="ruangan" id="ruangan">              
-                                <option value="0" selected>-- Select Room Number --</option>
+                              <label for="tipe">Room Number</label>
+                              <select class="form-select" name="ruang" id="ruang">              
+                                <option value="0">-- Select Room Number --</option>
                               </select>
                           </div>
 
