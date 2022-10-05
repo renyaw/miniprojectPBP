@@ -67,7 +67,7 @@ tipe.onchange = function () {
 
 function cekDaftar(){
   var valid = true
-
+  resetError()
   if (nama.value == '') {
     error('nama', 'Nama lengkap harus diisi')
     valid = false;
