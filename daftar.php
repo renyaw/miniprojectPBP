@@ -82,7 +82,7 @@
                                 <input type="password" class="form-control" id="password" name="password"  placeholder="Masukkan Password">
                                 <small class="form-text text-danger" id="password_error"></small>
                             </div>
-                            <br>
+                            <br>  
 
                             <div class="form-group">
                                 <label for="tipe">Confirm Password</label>
