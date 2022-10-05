@@ -31,6 +31,7 @@
             <div class="card">
                     <div class="card-body">
                       <?php
+                        require_once('db_login.php');
                         if (isset($_POST['submit'])) {
                           $nama = test_input($_POST['nama']);
                           $email = test_input($_POST['email']);
@@ -59,6 +60,7 @@
                                 <small class="form-text text-danger" id="nama_error"></small>
                             </div>
                             <br>
+
                             <div class="form-group">
                                 <label for="email">Email</label>
                                 <input type="text" class="form-control" id="email" name="email" placeholder="Masukkan Email">
@@ -66,6 +68,7 @@
                                 <small class="form-text text-success" id="email_success" style="display: none">Email tersedia</small>
                             </div>
                             <br>
+
                             <div class="form-group">
                                 <label for="username">Username</label>
                                 <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username">
@@ -73,17 +76,20 @@
                                 <small class="form-text text-success" id="username_success" style="display: none">Username tersedia</small>
                             </div>
                             <br>
+
                             <div class="form-group">
                                 <label for="password">Password</label>
                                 <input type="text" class="form-control" id="password" name="password"  placeholder="Masukkan Password">
                                 <small class="form-text text-danger" id="password_error"></small>
                             </div>
                             <br>
+
                             <div class="form-group">
                                 <label for="tipe">Confirm Password</label>
                                 <input type="text" class="form-control" id="conpass" name="conpass" placeholder="Masukkan Ulang Password" >
                                 <small class="form-text text-danger" id="conpass_error"></small>
                             </div>
+
                             <br>
                             <button type="submit" class="btn btn-outline-success" name="submit" value="submit">Submit</button><br><br>
                         </form>
