@@ -79,14 +79,13 @@
                             <button type="submit" name="submit" value="submit" class="btn btn-outline-success">Daftar</button>
                           </div>
                       </form>
-                      <script src="script.js"></script>  
                         
                     </div>
                 </div>
           </div>
         </div>
         <p class=" pb-lg-2" style="color: #393f81;">Punya Akun? <a href="login.php"style="color: #393f81;">Login Di Sini</a></p>
-
+    </section>
                 </div>
               </div>
             </div>
@@ -94,5 +93,6 @@
         </div>
       </div>
     </div>
+    <script src="script.js"></script>  
   </body>
 </html>
