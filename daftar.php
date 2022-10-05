@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="daftar.css">
   </head>
   <body>
+  <?php
+
+    //session_start();
+    require_once('db_login.php');
+  ?>
+
     <section style="background-color: #F1A661;">
     <div class="container">
       <div class="row d-flex justify-content-center h-100">
