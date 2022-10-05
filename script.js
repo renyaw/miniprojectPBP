@@ -119,7 +119,7 @@ email.onkeyup = function () {
     var success = document.getElementById('email_success')
     var xhr = new XMLHttpRequest();
 
-    xhr.open('GET', 'cek_email.php?email=' + email.value)
+    xhr.open('GET', 'check_email.php?email=' + email.value)
 
     xhr.onload = function () {
         if (xhr.responseText == false) {
@@ -138,7 +138,7 @@ username.onkeyup = function () {
   var success = document.getElementById('username_success')
   var xhr = new XMLHttpRequest();
 
-  xhr.open('GET', 'cek_username.php?email=' + username.value)
+  xhr.open('GET', 'check_username.php?email=' + username.value)
 
   xhr.onload = function () {
       if (xhr.responseText == false) {
