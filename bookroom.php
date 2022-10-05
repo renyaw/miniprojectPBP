@@ -55,12 +55,15 @@
           <h2>About Us</h2>
         </div>
       </div>
-      <div class="row justify-content-center fs-4 text-center">
-        <div class="col-md-4">
-        <p>Bebek Voice berdiri sejak 2020 walo pegel berdirinya sampe sekarang gpp lah ya, intinya kita berdiri ges ahay. Kami merupakan tempat karaoke yang aman nyaman sentosa.</p>
-        </div>
-        <div class="col-md-4">
-          <p>Bebek Voice memiliki berbagai macam penghargaan, salah satunya adalah rekor muri anjay kek burung, iya ges kenapa burung karena kita gachorrr anjayyy skud karoke di Bebek Voice</p>
+      <div class="row justify-content-center fs-5 text-center">
+        <div class="col-md-10">
+        <p>Bebek Voice berdiri sejak 2020 walo pegel berdirinya sampe sekarang gpp lah ya, intinya kita berdiri ges. Kami merupakan tempat karaoke yang aman nyaman sentosa.
+        <br>
+        <br>
+        <br>
+        Bebek Voice memiliki berbagai macam penghargaan, salah satunya adalah rekor muri anjay kek burung. Iya ges kenapa burung karena kita gachor anjay skud gasin kali brek karoke di Bebek Voice.</p>
+        <br>
+        <br>
         </div>
       </div>
     </div>
