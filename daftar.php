@@ -36,7 +36,7 @@
           <div class="">
             <div class="card">
                     <div class="card-body">
-                      <form method="POST" autocomplete="on" name="form" onsubmit="return cekdaftar()" action="cek_daftar.php">
+                      <form method="POST" autocomplete="on" name="form" onsubmit="return cekDaftar()" action="cek_daftar.php">
                         <!-- ges ini nanti yang room dibikin dropdown ya? -->
                           <div class="form-group">
                               <label for="nama">Nama Lengkap</label>
@@ -94,9 +94,5 @@
         </div>
       </div>
     </div>
-  </section>
-    
-    <script src="ajax.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -65,9 +65,8 @@ tipe.onchange = function () {
   xhr.send();
 }
 
-function cekdaftar(){
+function cekDaftar(){
   var valid = true
-  resetError()
 
   if (nama.value == '') {
     error('nama', 'Nama lengkap harus diisi')

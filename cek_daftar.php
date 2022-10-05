@@ -9,7 +9,7 @@
     $result = "INSERT INTO akun (username, password) VALUES('$username', '$password');";
     $result .= "INSERT INTO pelanggan VALUES(NULL, '$nama', '$email')";
 
-    if ($db->multi_query($result)== true):
+    if ($db->multi_query($result)== TRUE):
     ?>
         <div class="alert alert-success">Data berhasil disimpan</div>
     <?php else: ?>
