@@ -138,7 +138,7 @@ username.onkeyup = function () {
   var success = document.getElementById('username_success')
   var xhr = new XMLHttpRequest();
 
-  xhr.open('GET', 'check_username.php?email=' + username.value)
+  xhr.open('GET', 'check_username.php?username=' + username.value)
 
   xhr.onload = function () {
       if (xhr.responseText == false) {

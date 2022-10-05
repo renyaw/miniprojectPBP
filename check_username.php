@@ -7,8 +7,6 @@ if (!isset($_GET['username'])) {
 } else {
     $username = test_input($_GET['username']);
     $result = $db->query("SELECT * FROM akun WHERE username='$username");
-
-    if($result->num_rows == 0){
-        echo true;
-    }
+    
+    echo $result->num_rows == 0;
 }
