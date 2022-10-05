@@ -64,7 +64,7 @@
                 </div>
           </div>
         </div>
-        <p class=" pb-lg-2" style="color: #393f81;">Punya Akun? <a href="#login.php"style="color: #393f81;">Login Di Sini</a></p>
+        <p class=" pb-lg-2" style="color: #393f81;">Punya Akun? <a href="login.php"style="color: #393f81;">Login Di Sini</a></p>
 
                 </div>
               </div>
