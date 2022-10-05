@@ -136,7 +136,7 @@
           <div class="card">
                   <div class="card-header">Booking Room</div>
                   <div class="card-body">
-                      <form method="POST" autocomplete="on" action="">
+                      <form method="POST" name="form" autocomplete="on" action="">
                         <!-- ges ini nanti yang room dibikin dropdown ya? -->
                           <div class="form-group">
                               <label for="tipe">Room Type</label>
