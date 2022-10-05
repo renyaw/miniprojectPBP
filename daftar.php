@@ -30,34 +30,61 @@
           <div class="">
             <div class="card">
                     <div class="card-body">
-                        <form method="POST" name="form" autocomplete="on" action="">
+                      <?php
+                        if (isset($_POST['submit'])) {
+                          $nama = test_input($_POST['nama']);
+                          $email = test_input($_POST['email']);
+                          $username = test_input($_POST['username']);
+                          $password = test_input($_POST['pass']);
+
+
+                          $result = $db->query("INSERT INTO mahasiswa(nama, nim, email, jenis_kelamin, alamat, id_departemen, id_jurusan) VALUES('$nama', '$nim', '$email', '$jenis_kelamin', '$alamat', '$departemen', '$jurusan')");
+
+                          if ($result):
+                          ?>
+                              <div class="alert alert-success">Data berhasil disimpan</div>
+                          <?php else: ?>
+                              <div class="alert alert-error">Data gagal disimpan <?php echo $db->error ?></div>
+                          }
+                          <?php
+                          endif;
+                        }
+                      ?>
+                        <form method="POST" name="form" autocomplete="on" onsubmit="return cekdaftar()" action="">
                           <!-- ges ini nanti yang room dibikin dropdown ya? -->
                             <div class="form-group">
                                 <label for="tipe">Nama Lengkap</label>
                                 <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" value="">
+                                <small class="form-text text-danger" id="nama_error"></small>
                             </div>
                             <br>
                             <div class="form-group">
                                 <label for="tipe">Email</label>
                                 <input type="text" class="form-control" id="email" name="email" placeholder="Masukkan Email" value="">
+                                <small class="form-text text-danger" id="email_error"></small>
+                                <small class="form-text text-success" id="email_success" style="display: none">Email tersedia</small>
                             </div>
                             <br>
                             <div class="form-group">
                                 <label for="tipe">Username</label>
-                                <input type="text" class="form-control" id="user" name="user" placeholder="Masukkan Username" value="">
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan usernamename" value="">
+                                <small class="form-text text-danger" id="username_error"></small>
+                                <small class="form-text text-success" id="username_success" style="display: none">Username tersedia</small>
                             </div>
                             <br>
                             <div class="form-group">
                                 <label for="tipe">Password</label>
-                                <input type="text" class="form-control" id="pass" name="pass" placeholder="Masukkan Password" value="">
+                                <input type="text" class="form-control" id="password" name="password"  placeholder="Masukkan Password" value="">
+                                <small class="form-text text-danger" id="password_error"></small>
                             </div>
                             <br>
                             <div class="form-group">
                                 <label for="tipe">Confirm Password</label>
                                 <input type="text" class="form-control" id="conpass" name="conpass" placeholder="Masukkan Ulang Password" value="">
+                                <small class="form-text text-danger" id="conpass_error"></small>
                             </div>
                             <br>
-                            <button type="button" class="btn btn-outline-success" onclick="" class="button">Submit</button><br><br>
+                            <button type="submit" class="btn btn-outline-success" name="submit" class="button">Submit</button><br><br>
                         </form>
                         
                     </div>
