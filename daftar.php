@@ -52,7 +52,7 @@
                           endif;
                         }
                       ?>
-                        <form method="POST" name="form" onsubmit="return cekdaftar()">
+                        <form method="POST" autocomplete="on" name="form" onsubmit="return cekdaftar()">
                           <!-- ges ini nanti yang room dibikin dropdown ya? -->
                             <div class="form-group">
                                 <label for="nama">Nama Lengkap</label>
@@ -91,7 +91,9 @@
                             </div>
 
                             <br>
-                            <button type="submit" class="btn btn-outline-success" name="submit" value="submit">Submit</button><br><br>
+                            <div class="col-auto justify-content-md-end d-md-flex">
+                              <button type="submit" name="submit" value="submit" class="btn btn-outline-success">Daftar</button>
+                            </div>
                         </form>
                         <script src="script.js"></script>
                         
