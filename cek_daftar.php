@@ -10,7 +10,7 @@
     $result .= "INSERT INTO pelanggan VALUES(NULL, '$nama', '$email')";
 
     if ($db->multi_query($result)== TRUE){
-        header("location:login.php?pesan=berhasil");
+        header("location:daftar.php?pesan=berhasil");
     }
 
 ?>

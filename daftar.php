@@ -8,18 +8,17 @@
     <link rel="stylesheet" href="daftar.css">
   </head>
   <body>
-  <?php
-
-    //session_start();
-    require_once('db_login.php');
-    if(isset($_GET['pesan'])){
-      if($_GET['pesan']=="berhasil"){
-        echo "<div class='alert alert-success text-center'>Data Berhasil tersimpan</div>";
-      }
-    }
-  ?>
-
     <section style="background-color: #F1A661;">
+    <?php
+
+      //session_start();
+      require_once('db_login.php');
+      if(isset($_GET['pesan'])){
+        if($_GET['pesan']=="berhasil"){
+          echo "<div class='alert alert-success text-center'>Data Berhasil tersimpan</div>";
+        }
+      }
+    ?>
     <div class="container">
       <div class="row d-flex justify-content-center h-100">
         <div class="col col-xl-10">
