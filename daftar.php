@@ -39,9 +39,9 @@
 
 
                           $result = "INSERT INTO akun (username, password) VALUES('$username', '$password');";
+                          $result .= "INSERT INTO pelanggan VALUES(NULL, '$nama', '$email');";
 
-
-                          if ($result):
+                          if ($db->multi_query($result)== true):
                           ?>
                               <div class="alert alert-success">Data berhasil disimpan</div>
                           <?php else: ?>
