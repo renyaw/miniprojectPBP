@@ -79,14 +79,14 @@
 
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="text" class="form-control" id="password" name="password"  placeholder="Masukkan Password">
+                                <input type="password" class="form-control" id="password" name="password"  placeholder="Masukkan Password">
                                 <small class="form-text text-danger" id="password_error"></small>
                             </div>
                             <br>
 
                             <div class="form-group">
                                 <label for="tipe">Confirm Password</label>
-                                <input type="text" class="form-control" id="conpass" name="conpass" placeholder="Masukkan Ulang Password" >
+                                <input type="password" class="form-control" id="conpass" name="conpass" placeholder="Masukkan Ulang Password" >
                                 <small class="form-text text-danger" id="conpass_error"></small>
                             </div>
 
