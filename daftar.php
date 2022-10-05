@@ -21,6 +21,9 @@
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js"
       defer
     ></script>
+    <title>
+      Daftar
+    </title>
   </head>
   <body class="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
     <div
