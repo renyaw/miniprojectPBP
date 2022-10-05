@@ -54,7 +54,11 @@
             <input type="password" id="password" name="password" placeholder="Masukan Password..."class="form-control" value="">
             <small class="form-text text-danger" id="password_error"></small>
         </div>
-
+        <div>
+            <a class="form-text text muted col-auto" href="daftar.php"> 
+                <small> Belum punya akun?</small>
+            </a>
+        </div>
         <br>
 
         <div class="col-auto justify-content-md-end d-md-flex">
