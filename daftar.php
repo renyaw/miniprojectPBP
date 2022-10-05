@@ -30,72 +30,50 @@
           <div class="">
             <div class="card">
                     <div class="card-body">
-                      <?php
-                        require_once('db_login.php');
-                        if (isset($_POST['submit'])) {
-                          $nama = test_input($_POST['nama']);
-                          $email = test_input($_POST['email']);
-                          $username = test_input($_POST['username']);
-                          $password = test_input($_POST['password']);
+                      <form method="POST" autocomplete="on" name="form" onsubmit="return cekdaftar()" action="cek_daftar.php">
+                        <!-- ges ini nanti yang room dibikin dropdown ya? -->
+                          <div class="form-group">
+                              <label for="nama">Nama Lengkap</label>
+                              <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" >
+                              <small class="form-text text-danger" id="nama_error"></small>
+                          </div>
+                          <br>
 
+                          <div class="form-group">
+                              <label for="email">Email</label>
+                              <input type="text" class="form-control" id="email" name="email" placeholder="Masukkan Email">
+                              <small class="form-text text-danger" id="email_error"></small>
+                              <small class="form-text text-success" id="email_success" style="display: none">Email tersedia</small>
+                          </div>
+                          <br>
 
-                          $result = "INSERT INTO akun (username, password) VALUES('$username', '$password');";
-                          $result .= "INSERT INTO pelanggan VALUES(NULL, '$nama', '$email')";
+                          <div class="form-group">
+                              <label for="username">Username</label>
+                              <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username">
+                              <small class="form-text text-danger" id="username_error"></small>
+                              <small class="form-text text-success" id="username_success" style="display: none">Username tersedia</small>
+                          </div>
+                          <br>
 
-                          if ($db->multi_query($result)== true):
-                          ?>
-                              <div class="alert alert-success">Data berhasil disimpan</div>
-                          <?php else: ?>
-                              <div class="alert alert-error">Data gagal disimpan <?php echo $db->error ?></div>
-                          }
-                          <?php
-                          endif;
-                        }
-                      ?>
-                        <form method="POST" autocomplete="on" name="form" onsubmit="return cekdaftar()">
-                          <!-- ges ini nanti yang room dibikin dropdown ya? -->
-                            <div class="form-group">
-                                <label for="nama">Nama Lengkap</label>
-                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" >
-                                <small class="form-text text-danger" id="nama_error"></small>
-                            </div>
-                            <br>
+                          <div class="form-group">
+                              <label for="password">Password</label>
+                              <input type="password" class="form-control" id="password" name="password"  placeholder="Masukkan Password">
+                              <small class="form-text text-danger" id="password_error"></small>
+                          </div>
+                          <br>  
 
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="text" class="form-control" id="email" name="email" placeholder="Masukkan Email">
-                                <small class="form-text text-danger" id="email_error"></small>
-                                <small class="form-text text-success" id="email_success" style="display: none">Email tersedia</small>
-                            </div>
-                            <br>
+                          <div class="form-group">
+                              <label for="tipe">Confirm Password</label>
+                              <input type="password" class="form-control" id="conpass" name="conpass" placeholder="Masukkan Ulang Password" >
+                              <small class="form-text text-danger" id="conpass_error"></small>
+                          </div>
 
-                            <div class="form-group">
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username">
-                                <small class="form-text text-danger" id="username_error"></small>
-                                <small class="form-text text-success" id="username_success" style="display: none">Username tersedia</small>
-                            </div>
-                            <br>
-
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" name="password"  placeholder="Masukkan Password">
-                                <small class="form-text text-danger" id="password_error"></small>
-                            </div>
-                            <br>  
-
-                            <div class="form-group">
-                                <label for="tipe">Confirm Password</label>
-                                <input type="password" class="form-control" id="conpass" name="conpass" placeholder="Masukkan Ulang Password" >
-                                <small class="form-text text-danger" id="conpass_error"></small>
-                            </div>
-
-                            <br>
-                            <div class="col-auto justify-content-md-end d-md-flex">
-                              <button type="submit" name="submit" value="submit" class="btn btn-outline-success">Daftar</button>
-                            </div>
-                        </form>
-                        
+                          <br>
+                          <div class="col-auto justify-content-md-end d-md-flex">
+                            <button type="submit" name="submit" value="submit" class="btn btn-outline-success">Daftar</button>
+                          </div>
+                      </form>
+                      <script src="script.js"></script>  
                         
                     </div>
                 </div>
@@ -113,7 +91,6 @@
   </section>
     
     <script src="ajax.js"></script>
-    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>
 </html>
