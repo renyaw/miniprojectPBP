@@ -116,22 +116,22 @@ function resetError() {
 }
 
 email.onkeyup = function () {
-  var success = document.getElementById('email_success')
-  var xhr = new XMLHttpRequest();
+    var success = document.getElementById('email_success')
+    var xhr = new XMLHttpRequest();
 
-  xhr.open('GET', 'check_email.php?email=' + email.value)
+    xhr.open('GET', 'check_email.php?email=' + email.value)
 
-  xhr.onload = function () {
-      if (xhr.responseText == false) {
-          error('email', 'Email sudah dipakai')
-          success.style.display = 'none'
-      } else {
-          hideError('email')
-          success.style.display = 'block'
-      }
-  }
+    xhr.onload = function () {
+        if (xhr.responseText == false) {
+            error('email', 'Email sudah dipakai')
+            success.style.display = 'none'
+        } else {
+            hideError('email')
+            success.style.display = 'block'
+        }
+    }
 
-  xhr.send()
+    xhr.send()
 }
 
 
