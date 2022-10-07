@@ -11,6 +11,7 @@
     <?php
     //Cek apakah sudah login atau belum
     session_start();
+    require_once('db_login.php');
     if(empty($_SESSION['username'])){
       header('Location:login.php?pesan=belumlogin');
     }
@@ -46,7 +47,17 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#rsvp">RSVP</a>
-            </li>
+            </li class="nav-item">
+            <?php 
+            $email=$_SESSION['email'];
+            //ambil pesanan yang dimiliki customer
+            $query=$db->query("select * from pesanan where email='$email'");
+            //count row
+            $cek= mysqli_num_rows($query);
+            if($cek!=0){
+              echo '<a class="nav-link" href="status_pembayaran.php">' ."Status Pesanan".'</a>';
+            }
+            ?>
             <li class="nav-item">
               <a class="nav-link" href="login.php">Log Out</a>
             </li>
