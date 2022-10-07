@@ -45,10 +45,12 @@
                 <div class="text fw-bold fs-5 lh-lg">
                     <!-- ini buat masukin dari post -->
                     <?php
-                    $email=$_POST['email'];
-                    $nama=$_POST['nama'];
-                    $tipe=$_POST['tipe'];
-                    $ruang=$_POST['ruang'];
+                    $email=test_input($_POST['email']);
+                    $nama=test_input($_POST['nama']);
+                    $tipe=test_input($_POST['tipe']);
+                    $ruang=test_input($_POST['ruang']);
+
+                    $input=$db->query("insert into pesanan(nama,email,no_ruang,id_tipe) values('$nama','$email','$ruang','$tipe')");
                     $result=$db->query("select nama from tipe where id_tipe='$tipe'");
                     //memasukkan data dari login ke $data dalam bentuk array
                     $data=mysqli_fetch_assoc($result);
