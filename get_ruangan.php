@@ -3,7 +3,7 @@
 
   if (isset($_GET['id'])) {
       $id = $_GET['id'];
-      $result = $db->query("SELECT * from ruang WHERE id_tipe='$id'");
+      $result = $db->query("SELECT * from ruang WHERE id_tipe='$id' and status='0'");
 ?>
   <option value="0">-- Select Room Number --</option>
   <?php while ($data = $result->fetch_object()): ?>

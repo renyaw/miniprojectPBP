@@ -25,6 +25,7 @@ if($cek>0){
 
         //buat session login dan username
         $_SESSION['username'] = $username;
+        $_SESSION['email']= $data['email'];
         //alihkan ke halaman dashboard admin
         header("location:dashboard_admin.php");
     }
@@ -32,6 +33,7 @@ if($cek>0){
 
         //buat session login dan username
         $_SESSION['username'] = $username;
+        $_SESSION['email']= $data['email'];
         //alihkan ke home customer
         header("location:bookroom.php");
     }

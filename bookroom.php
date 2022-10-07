@@ -166,18 +166,17 @@
 
                                     while ($data = $result->fetch_object()):
                                   ?>
-                                    <option value="<?php echo $data->id_tipe ?>"><?php echo $data->nama_ruang ?></option>
+                                    <option value="<?php echo $data->id_tipe ?>"><?php echo $data->nama ?></option>
                                 <?php endwhile ?>
                               </select>
                           </div>
-                          
                           <div class="form-group">
                               <label for="tipe">Room Number</label>
                               <select class="form-control" name="ruang" id="ruang">              
                                 <option value="0">-- Select Room Number --</option>
                               </select>
                           </div>
-
+                          
                           <br>
                           <button type="button" class="btn btn-outline-success" onclick="" class="button">Submit</button><br><br>
                       </form>
