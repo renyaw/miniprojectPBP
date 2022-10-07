@@ -45,7 +45,7 @@
                 <div class="text fw-bold fs-5 lh-lg">
                     <!-- ini buat masukin dari post -->
                     <?php
-                    $email=test_input($_POST['email']);
+                    $email=$_SESSION['email'];
                     $nama=test_input($_POST['nama']);
                     $tipe=test_input($_POST['tipe']);
                     $ruang=test_input($_POST['ruang']);
