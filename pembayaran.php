@@ -57,7 +57,7 @@
 
                     echo '&nbsp;&nbsp;Email: '.$email.'</br>';
                     echo '&nbsp;&nbsp;Nama: '.$nama.'</br>';
-                    echo '&nbsp;&nbsp;Tipe Ruangan: '.$data['nama'].'</br>';
+                    echo '&nbsp;&nbsp;Tipe Ruangan: '.$data['nama_tipe'].'</br>';
                     echo '&nbsp;&nbsp;Nomor Ruangan: '.$ruang.'</br>';
                     echo '&nbsp;&nbsp;Harga: '.$data['harga'].'</br>';
                     ?>
@@ -70,6 +70,7 @@
                         <input type="file" class="form-control" id="inputGroupFile02">
                         <label class="input-group-text" for="inputGroupFile02">Upload</label>
                 </div>
+
         </div>
             </div>
         </div>
