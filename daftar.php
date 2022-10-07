@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="daftar.css">
   </head>
-  <body>
+  <body style="background-color: #F1A661;">
     <?php
 
       //session_start();
@@ -18,14 +18,14 @@
         }
       }
     ?>
-    <section style="background-color: #F1A661;">
-    <div class="container">
+    <section>
+    <div class="container mt-5">
       <div class="row d-flex justify-content-center h-100">
         <div class="col col-xl-10">
           <div class="card" style="border-radius: 1rem;">
             <div class="row g-0">
-              <div class="col-md-6 col-lg-5 d-none d-md-block">
-                <img src="img\icon.png"
+              <div class="col-md-6 col-lg-5  d-none d-md-block">
+                <img class="img-fluid mt-5"src="img\icon.png"
                   alt="icon" class="justify-content-center" />
               </div>
               <div class="col-md-6 col-lg-7 d-flex align-items-center">
@@ -37,7 +37,7 @@
                     <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Buat Akun</h5>
                     <div class="row justify-content-center">
           <div class="">
-            <div class="card">
+            <div class="card bg-light">
                 <div class="card-body">
                   <form method="POST" autocomplete="on" name="form" onsubmit="return cekDaftar()" action="cek_daftar.php">
                     <!-- ges ini nanti yang room dibikin dropdown ya? -->
@@ -88,14 +88,14 @@
           </div>
         </div>
         <p class=" pb-lg-2" style="color: #393f81;">Punya Akun? <a href="login.php"style="color: #393f81;">Login Di Sini</a></p>
-    </section>
+    
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div></section>
     <script src="script.js"></script>  
   </body>
 </html>
