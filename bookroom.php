@@ -152,6 +152,10 @@
                             <label for="email">Email</label>
                             <input type="text" class="form-control" id="email" name="email" placeholder="Masukan Email" value="">
                         </div>
+                        <div class="form-group">
+                            <label for="nama">Nama</label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukan Nama" value="">
+                        </div>
                           <div class="form-group">
                               <label for="tipe">Room Type</label>
                               <select class="form-control" name="tipe" id="tipe">
