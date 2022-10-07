@@ -59,7 +59,7 @@
                 <div class="col">
                 <table class="table table-hover table-striped">
                     <tr>
-                        <th>Nomor Pesanan</th>
+                        <th>ID Pesanan</th>
                         <th>Username</th>
                         <th>Tanggal Pemesanan</th>
                         <th>Room Type</th>
@@ -82,11 +82,11 @@
                         $i = 1;
                         while ($row = $result->fetch_object()){ // fetch_object-> mengembalikan baris saat ini dari kumpulan hasil sebagai objek atau keluarasnfungsi mengembalikan baris saat ini 
                             echo '<tr>';
-                            echo '<td>' .$row->no_pesanan. '</td>';
-                            echo '<td>' .$row->username. '</td>';
-                            echo '<td>' .$row->tanggal_pesanan. '</td>';
-                            echo '<td>' .$row->jenis_ruangan. '</td>';
-                            echo '<td>' .$row->no_ruangan. '</td>';
+                            echo '<td>' .$row->id_pesanan. '</td>';
+                            echo '<td>' .$row->nama. '</td>';
+                            echo '<td>' .$row->email. '</td>';
+                            echo '<td>' .$row->id_tipe. '</td>';
+                            echo '<td>' .$row->no_ruang. '</td>';
                             echo '</tr>';
                             $i++;
                         }
