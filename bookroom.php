@@ -19,9 +19,16 @@
     <!-- Navbar ye -->
     <nav class="navbar navbar-expand-lg fixed-top" style="background-color:#F1A661;">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand fw-bolder" href="#" >
           <img src="img\icon.png" alt="Logo" width="30" class="d-inline-block align-text-top">
           Bebek Voice
+        </a>
+        <a class="navbar-brand fw-bold">
+          <img src="img/online.png" width="10" class="d-inline-block align-text-middle">
+          <?php 
+                $uname=$_SESSION['username'];
+                $uname= ucfirst($uname);
+                echo $uname?>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
