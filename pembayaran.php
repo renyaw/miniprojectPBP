@@ -52,9 +52,12 @@
 
                     //insert into db
                     $input=$db->query("insert into pesanan(nama,email,no_ruang,id_tipe) values('$nama','$email','$ruang','$tipe')");
+                    //mengupdate status ruang yang sudah dipesan menjadi 1
+                    $update=$db->query("update ruang set status=1 where no_ruang='$ruang'");
+                    //mengambil semua data pada tabel tibe yang id_tipe sama dengan tipe
                     $result=$db->query("select * from tipe where id_tipe='$tipe'");
                     //update status ruang
-                    $update=$db->query("update ruang set status=1 where no_ruang='$ruang'");
+                    
                     //memasukkan data dari login ke $data dalam bentuk array
                     $data=mysqli_fetch_assoc($result);
 
