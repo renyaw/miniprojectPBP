@@ -75,8 +75,8 @@
                 </div>
 
         </div>
-        <a href="bookroom.php"><button type="button" class="btn btn-outline-warning"> Submit</button></a>
-            </div>
+        <div class="d-md-flex justify-content-md-end mb-2">
+          <a href="bookroom.php"><button type="button" class="btn btn-success"> Submit</button></a>
         </div>
         <div class="row mx-auto">
         
