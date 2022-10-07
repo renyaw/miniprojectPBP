@@ -86,9 +86,9 @@
                             echo '<tr>';
                             echo '<td>' .$row->id_pesanan. '</td>';
                             echo '<td>' .$row->nama. '</td>';
-                            echo '<td>' .$row->tanggal_pesanan. '</td>';
-                            echo '<td>' .$row->jenis_ruangan. '</td>';
+                            echo '<td>' .$row->email. '</td>';
                             echo '<td>' .$row->nama_tipe. '</td>';
+                            echo '<td>' .$row->no_ruang. '</td>';
                             echo '</tr>';
                             $i++;
                         }

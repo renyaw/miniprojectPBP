@@ -50,8 +50,11 @@
                     $tipe=test_input($_POST['tipe']);
                     $ruang=test_input($_POST['ruang']);
 
+                    //insert into db
                     $input=$db->query("insert into pesanan(nama,email,no_ruang,id_tipe) values('$nama','$email','$ruang','$tipe')");
                     $result=$db->query("select * from tipe where id_tipe='$tipe'");
+                    //update status ruang
+                    $update=$db->query("update ruang set status=1 where no_ruang='$ruang'");
                     //memasukkan data dari login ke $data dalam bentuk array
                     $data=mysqli_fetch_assoc($result);
 
