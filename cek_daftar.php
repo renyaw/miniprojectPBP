@@ -6,8 +6,7 @@
     $password = test_input($_POST['password']);
 
 
-    $result = "INSERT INTO akun (username, password) VALUES('$username', '$password');";
-    $result .= "INSERT INTO pelanggan VALUES(NULL, '$nama', '$email')";
+    $result = "INSERT INTO akun VALUES('$email','$username', '$password','$nama')";
 
     if ($db->multi_query($result)== TRUE){
         header("location:daftar.php?pesan=berhasil");
