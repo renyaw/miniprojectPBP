@@ -178,7 +178,7 @@
                           </div>
                           
                           <br>
-                          <button type="button" class="btn btn-outline-success" onclick="" class="button">Submit</button><br><br>
+                          <button type="submit" class="btn btn-outline-success" onclick="" class="button">Submit</button><br><br>
                       </form>
                       <div id="add_response"></div>
                   </div>
