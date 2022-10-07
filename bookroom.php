@@ -166,7 +166,7 @@
 
                                     while ($data = $result->fetch_object()):
                                   ?>
-                                    <option value="<?php echo $data->id_tipe ?>"><?php echo $data->nama_ruang ?></option>
+                                    <option value="<?php echo $data->id_tipe ?>"><?php echo $data->nama ?></option>
                                 <?php endwhile ?>
                               </select>
                           </div>
