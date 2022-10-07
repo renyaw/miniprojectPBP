@@ -51,7 +51,7 @@
                     $ruang=test_input($_POST['ruang']);
 
                     $input=$db->query("insert into pesanan(nama,email,no_ruang,id_tipe) values('$nama','$email','$ruang','$tipe')");
-                    $result=$db->query("select nama from tipe where id_tipe='$tipe'");
+                    $result=$db->query("select * from tipe where id_tipe='$tipe'");
                     //memasukkan data dari login ke $data dalam bentuk array
                     $data=mysqli_fetch_assoc($result);
 
@@ -59,6 +59,7 @@
                     echo '&nbsp;&nbsp;Nama: '.$nama.'</br>';
                     echo '&nbsp;&nbsp;Tipe Ruangan: '.$data['nama'].'</br>';
                     echo '&nbsp;&nbsp;Nomor Ruangan: '.$ruang.'</br>';
+                    echo '&nbsp;&nbsp;Harga: '.$data['harga'].'</br>';
                     ?>
                     
                 </div>
