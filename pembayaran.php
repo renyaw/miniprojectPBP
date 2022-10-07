@@ -44,6 +44,8 @@
               <div class="card mt-3">
                 <div class="text fw-bold fs-5 lh-lg">
                     <!-- ini buat masukin dari post -->
+                  <p class="fs-5 ms-2">Detail Pemesanan</p>
+
                     <?php
                     $email=$_SESSION['email'];
                     $nama=test_input($_POST['nama']);
