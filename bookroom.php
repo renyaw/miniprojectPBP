@@ -148,7 +148,10 @@
                   <div class="card-header">Booking Room</div>
                   <div class="card-body">
                       <form method="POST" name="form" autocomplete="on" action="">
-                        <!-- ges ini nanti yang room dibikin dropdown ya? -->
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Masukan Email" value="">
+                        </div>
                           <div class="form-group">
                               <label for="tipe">Room Type</label>
                               <select class="form-control" name="tipe" id="tipe">
