@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="daftar.css">
   </head>
   <body>
-    <section style="background-color: #F1A661;">
     <?php
 
       //session_start();
@@ -19,6 +18,7 @@
         }
       }
     ?>
+    <section style="background-color: #F1A661;">
     <div class="container">
       <div class="row d-flex justify-content-center h-100">
         <div class="col col-xl-10">
