@@ -147,7 +147,7 @@
           <div class="card">
                   <div class="card-header">Booking Room</div>
                   <div class="card-body">
-                      <form method="POST" name="form" autocomplete="on" action="">
+                      <form method="POST" name="form" autocomplete="on" action="pembayaran.php">
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="text" class="form-control" id="email" name="email" placeholder="Masukan Email" value="">
@@ -178,7 +178,7 @@
                           </div>
                           
                           <br>
-                          <button type="button" class="btn btn-outline-success" onclick="" class="button">Submit</button><br><br>
+                          <button type="submit" class="btn btn-outline-success" onclick="" class="button">Submit</button><br><br>
                       </form>
                       <div id="add_response"></div>
                   </div>

@@ -72,7 +72,7 @@
                         require_once('db_login.php'); // memanggil halaman
                         
                         // execute the query
-                        $query = "SELECT * FROM pesanan ORDER BY no_pesanan "; //Klausa ORDER BY digunakan untuk mengurutkan hasil-set dalam urutan menaik atau menurun
+                        $query = "SELECT * FROM pesanan ORDER BY id_pesanan "; //Klausa ORDER BY digunakan untuk mengurutkan hasil-set dalam urutan menaik atau menurun
                         $result = $db->query($query);
                         if (!$result){
                             die ("Could not the query the database: <br />" . $db->error ."<br>Query: " . $query);

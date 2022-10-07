@@ -7,6 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
   <body>
+    <?php 
+    session_start();
+    require_once('db_login.php');
+    ?>
   <nav class="navbar" style="background-color:#F1A661;">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -36,11 +40,27 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="text">
+            <div class="card col-6">
+              <div class="card mt-3">
+                <div class="text fw-bold fs-5 lh-lg">
                     <!-- ini buat masukin dari post -->
-                    ex:detail pesanan
+                    <?php
+                    $email=$_POST['email'];
+                    $nama=$_POST['nama'];
+                    $tipe=$_POST['tipe'];
+                    $ruang=$_POST['ruang'];
+                    $result=$db->query("select nama from tipe where id_tipe='$tipe'");
+                    //memasukkan data dari login ke $data dalam bentuk array
+                    $data=mysqli_fetch_assoc($result);
+
+                    echo '&nbsp;&nbsp;Email: '.$email.'</br>';
+                    echo '&nbsp;&nbsp;Nama: '.$nama.'</br>';
+                    echo '&nbsp;&nbsp;Tipe Ruangan: '.$data['nama'].'</br>';
+                    echo '&nbsp;&nbsp;Nomor Ruangan: '.$ruang.'</br>';
+                    ?>
+                    
                 </div>
+              </div>
                 <p>Upload Bukti Pembayaran</p>
                 <div class="">
                     <div class="input-group mb-3">
