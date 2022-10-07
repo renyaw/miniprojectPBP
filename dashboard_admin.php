@@ -59,9 +59,9 @@
                 <div class="col">
                 <table class="table table-hover table-striped">
                     <tr>
-                        <th>ID Pesanan</th>
-                        <th>Username</th>
-                        <th>Tanggal Pemesanan</th>
+                        <th>Nomor Pesanan</th>
+                        <th>Nama</th>
+                        <th>Email</th>
                         <th>Room Type</th>
                         <th>Room Number</th>
                     </tr>
@@ -72,20 +72,22 @@
                         require_once('db_login.php'); // memanggil halaman
                         
                         // execute the query
-                        $query = "SELECT * FROM pesanan ORDER BY id_pesanan "; //Klausa ORDER BY digunakan untuk mengurutkan hasil-set dalam urutan menaik atau menurun
+                        $query = "SELECT * FROM pesanan INNER JOIN tipe ON pesanan.id_tipe=tipe.id_tipe ORDER BY id_pesanan "; //Klausa ORDER BY digunakan untuk mengurutkan hasil-set dalam urutan menaik atau menurun
+                        
                         $result = $db->query($query);
                         if (!$result){
                             die ("Could not the query the database: <br />" . $db->error ."<br>Query: " . $query);
                         }
 
                         // fetch and display the results
+                        $query1 =  
                         $i = 1;
                         while ($row = $result->fetch_object()){ // fetch_object-> mengembalikan baris saat ini dari kumpulan hasil sebagai objek atau keluarasnfungsi mengembalikan baris saat ini 
                             echo '<tr>';
-                            echo '<td>' .$row->id_pesanan. '</td>';
+                            echo '<td>' .$i. '</td>';
                             echo '<td>' .$row->nama. '</td>';
                             echo '<td>' .$row->email. '</td>';
-                            echo '<td>' .$row->id_tipe. '</td>';
+                            echo '<td>' .$row->nama_tipe. '</td>';
                             echo '<td>' .$row->no_ruang. '</td>';
                             echo '</tr>';
                             $i++;
