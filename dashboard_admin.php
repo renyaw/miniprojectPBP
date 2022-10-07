@@ -72,7 +72,8 @@
                         require_once('db_login.php'); // memanggil halaman
                         
                         // execute the query
-                        $query = "SELECT * FROM pesanan INNER JOIN tipe ON pesanan.id_tipe=tipe.id_tipe ORDER BY id_pesanan "; //Klausa ORDER BY digunakan untuk mengurutkan hasil-set dalam urutan menaik atau menurun
+                        //Klausa ORDER BY digunakan untuk mengurutkan hasil-set dalam urutan menaik atau menurun
+                        $query = "SELECT * FROM pesanan INNER JOIN tipe ON pesanan.id_tipe=tipe.id_tipe ORDER BY id_pesanan "; 
                         
                         $result = $db->query($query);
                         if (!$result){
