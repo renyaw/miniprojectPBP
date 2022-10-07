@@ -84,7 +84,7 @@
                         $i = 1;
                         while ($row = $result->fetch_object()){ // fetch_object-> mengembalikan baris saat ini dari kumpulan hasil sebagai objek atau keluarasnfungsi mengembalikan baris saat ini 
                             echo '<tr>';
-                            echo '<td>' .$row->id_pesanan. '</td>';
+                            echo '<td>' .$i. '</td>';
                             echo '<td>' .$row->nama. '</td>';
                             echo '<td>' .$row->email. '</td>';
                             echo '<td>' .$row->nama_tipe. '</td>';
