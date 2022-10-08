@@ -52,6 +52,7 @@
                         <th>Email</th>
                         <th>Room Type</th>
                         <th>Room Number</th>
+                        <th>Bukti</th>
                     </tr>
 
                     <?php
@@ -78,6 +79,7 @@
                             echo '<td>' .$row->email. '</td>';
                             echo '<td>' .$row->nama_tipe. '</td>';
                             echo '<td>' .$row->no_ruang. '</td>';
+                            echo '<td>' .$row->bukti. '</td>';
                             echo '</tr>';
                             $i++;
                         }
