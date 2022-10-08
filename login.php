@@ -7,7 +7,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/icon.png" />
     <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
     <link rel="canonical" href="https://codepen.io/churma/pen/RwyewqN" />
-    <link rel="stylesheet" type="text/css" href="login.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <style class="INLINE_PEN_STYLESHEET_ID" src="">
       @import url("https://rsms.me/inter/inter-ui.css");
