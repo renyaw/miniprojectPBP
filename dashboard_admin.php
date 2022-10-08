@@ -30,20 +30,6 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#h">Reservasi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Reservasi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Reservasi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Reservasi</a>
-            </li>
-          </ul>
         </div>
       </div>
     </nav>
@@ -66,6 +52,7 @@
                         <th>Email</th>
                         <th>Room Type</th>
                         <th>Room Number</th>
+                        <th>Bukti</th>
                     </tr>
 
                     <?php
@@ -92,6 +79,7 @@
                             echo '<td>' .$row->email. '</td>';
                             echo '<td>' .$row->nama_tipe. '</td>';
                             echo '<td>' .$row->no_ruang. '</td>';
+                            echo '<td>' .$row->bukti. '</td>';
                             echo '</tr>';
                             $i++;
                         }
