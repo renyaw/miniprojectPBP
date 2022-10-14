@@ -53,6 +53,8 @@
                         <th>Room Type</th>
                         <th>Room Number</th>
                         <th>Bukti</th>
+                        <th>Status Pembayaran</th>
+                        <th>Action</th>
                     </tr>
 
                     <?php
@@ -80,6 +82,10 @@
                             echo '<td>' .$row->nama_tipe. '</td>';
                             echo '<td>' .$row->no_ruang. '</td>';
                             echo '<td>' .$row->bukti. '</td>';
+                            echo '<td>' .$row->status. '</td>';
+                            echo '<td><a class="btn btn-warning btn-sm" href="edit_pesanan.php?id='.$row->id_pesanan.'">Edit</a>&nbsp;&nbsp;
+                                    <a class="btn btn-danger btn-sm" href="delete_customer.php?id='.$row->id_pesanan.'">Delete</a>
+                                    </td>';
                             echo '</tr>';
                             $i++;
                         }
