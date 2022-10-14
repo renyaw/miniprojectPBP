@@ -9,9 +9,9 @@
     <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
   </head>
   <body>
-    <?php 
+    <?php
     session_start();
-    require_once('db_login.php');
+    require_once "db_login.php";
     ?>
   <nav class="navbar" style="background-color:#F1A661;">
         <div class="container">
@@ -51,29 +51,43 @@
                     </div>
                     <div class="card-body">
                     <?php
-                    $scnama=$_POST['nama'];
-                    $scnama=ucwords(strtolower($scnama));
-                    $email=$_SESSION['email'];
-                    $nama=test_input($scnama);
-                    $tipe=test_input($_POST['tipe']);
-                    $ruang=test_input($_POST['ruang']);
+                    $scnama = $_POST["nama"];
+                    $scnama = ucwords(strtolower($scnama));
+                    $email = $_SESSION["email"];
+                    $nama = test_input($scnama);
+                    $tipe = test_input($_POST["tipe"]);
+                    $ruang = test_input($_POST["ruang"]);
 
                     //insert into db
-                    $input=$db->query("insert into pesanan(nama,email,no_ruang,id_tipe) values('$nama','$email','$ruang','$tipe')");
+                    $input = $db->query(
+                        "insert into pesanan(nama,email,no_ruang,id_tipe) values('$nama','$email','$ruang','$tipe')"
+                    );
                     //mengupdate status ruang yang sudah dipesan menjadi 1
-                    $update=$db->query("update ruang set status=1 where no_ruang='$ruang'");
+                    $update = $db->query(
+                        "update ruang set status=1 where no_ruang='$ruang'"
+                    );
                     //mengambil semua data pada tabel tibe yang id_tipe sama dengan tipe
-                    $result=$db->query("select * from tipe where id_tipe='$tipe'");
+                    $result = $db->query(
+                        "select * from tipe where id_tipe='$tipe'"
+                    );
                     //update status ruang
-                    
-                    //memasukkan data dari login ke $data dalam bentuk array
-                    $data=mysqli_fetch_assoc($result);
 
-                    echo 'Email&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;: '.$email.'</br>';
-                    echo 'Nama&emsp;&emsp;&emsp;&ensp;&nbsp;&emsp;&nbsp;: '.$nama.'</br>';
-                    echo 'Tipe Ruangan&emsp;&ensp;: '.$data['nama_tipe'].'</br>';
-                    echo 'Nomor Ruangan&nbsp;: '.$ruang.'</br>';
-                    echo 'Harga&emsp;&emsp;&emsp;&ensp;&nbsp;&emsp;&nbsp;: Rp'.$data['harga'].'</br>';
+                    //memasukkan data dari login ke $data dalam bentuk array
+                    $data = mysqli_fetch_assoc($result);
+
+                    echo "Email&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;: " .
+                        $email .
+                        "</br>";
+                    echo "Nama&emsp;&emsp;&emsp;&ensp;&nbsp;&emsp;&nbsp;: " .
+                        $nama .
+                        "</br>";
+                    echo "Tipe Ruangan&emsp;&ensp;: " .
+                        $data["nama_tipe"] .
+                        "</br>";
+                    echo "Nomor Ruangan&nbsp;: " . $ruang . "</br>";
+                    echo "Harga&emsp;&emsp;&emsp;&ensp;&nbsp;&emsp;&nbsp;: Rp" .
+                        $data["harga"] .
+                        "</br>";
                     ?>
                     </div>
                 </div>

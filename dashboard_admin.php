@@ -37,69 +37,41 @@
 
     <!-- Table View -->
     <section id="reservasi">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col">
-                    <h2>Reservasi</h2>
-                </div>
+        <div class="container"> 
+        <div class="row text-center">
+            <div class="col">
+                <h2>Reservasi</h2>
             </div>
-            <div class="row text-center">
-                <div class="col">
-                <table class="table table-hover table-striped">
-                    <tr>
-                        <th>Nomor Pesanan</th>
-                        <th>Nama</th>
-                        <th>Email</th>
-                        <th>Room Type</th>
-                        <th>Room Number</th>
-                        <th>Bukti</th>
-                        <th>Status Pembayaran</th>
-                        <th>Action</th>
-                    </tr>
-
-                    <?php
-                        // include our login information
-                        //session_start(); //menginisialilasi session lalu akan diteruskan ke get dan post
-                        require_once('db_login.php'); // memanggil halaman
-                        
-                        // execute the query
-                        //Klausa ORDER BY digunakan untuk mengurutkan hasil-set dalam urutan menaik atau menurun
-                        $query = "SELECT * FROM pesanan INNER JOIN tipe ON pesanan.id_tipe=tipe.id_tipe ORDER BY id_pesanan "; 
-                        
-                        $result = $db->query($query);
-                        if (!$result){
-                            die ("Could not the query the database: <br />" . $db->error ."<br>Query: " . $query);
-                        }
-
-                        // fetch and display the results
-                        $query1 =  
-                        $i = 1;
-                        while ($row = $result->fetch_object()){ // fetch_object-> mengembalikan baris saat ini dari kumpulan hasil sebagai objek atau keluarasnfungsi mengembalikan baris saat ini 
-                            echo '<tr>';
-                            echo '<td>' .$i. '</td>';
-                            echo '<td>' .$row->nama. '</td>';
-                            echo '<td>' .$row->email. '</td>';
-                            echo '<td>' .$row->nama_tipe. '</td>';
-                            echo '<td>' .$row->no_ruang. '</td>';
-                            echo '<td>' .$row->bukti. '</td>';
-                            echo '<td>' .$row->status. '</td>';
-                            echo '<td><a class="btn btn-warning btn-sm" href="edit_pesanan.php?id='.$row->id_pesanan.'">Edit</a>&nbsp;&nbsp;
-                                    <a class="btn btn-danger btn-sm" href="delete_customer.php?id='.$row->id_pesanan.'">Delete</a>
-                                    </td>';
-                            echo '</tr>';
-                            $i++;
-                        }
-                        echo '</table>';
-                        echo '<br />';
-                        echo 'Total Rows = ' .$result->num_rows;
-                        $result->free();
-                        $db->close();
-                    ?>
-                </div>
+        </div> 
+        <br>  
+        <div class="row"> 
+          <div class="col-3">
+            <p>Status:</p>
+            <select name="status" id="status" class="form-control" onchange="showPesanan(this.value)">
+                    <option value="3">Semuanya</option>
+                    <option value="0">Belum Dikonfirmasi</option>
+                    <option value="1">Sudah Dikonfirmasi</option>
+                    <option value="2">Ditolak</option>
+            </select>
+          </div>
+        </div>
+          <br>
+          <div class="row text-center">
+            <div class="col">
+              <div id="detail_pesanan">          
+                <script>
+            window.onload = function(){
+              showPesanan(3);
+            }
+          </script></div>
             </div>
+          </div>
+        </div>
         </div>
     </section>
     <!-- Udah Table View -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="getpesananajax.js"></script>
+
   </body>
 </html>
