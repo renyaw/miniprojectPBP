@@ -71,7 +71,7 @@
 
   <!-- Popup -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Status Pesanan Anda</h5>
@@ -83,24 +83,32 @@
         <?php
           $email=$_SESSION['email'];
           $result=$db->query("select * from pesanan where email='$email'");
+
           $data=mysqli_fetch_assoc($result);
-
-          echo 'ID Pesanan: '.$data['id_pesanan'].'</br>';
-          echo 'Nama Pemesan: '.$data['nama'].'</br>';
-          echo 'Email Pemesan: '.$data['email'].'</br>';
-          echo 'Tipe Ruangan: '.$data['id_tipe'].'</br>';
-          echo 'Nomor Ruangan: '.$data['no_ruang'].'</br>';
-          
-          if($data['status']==0){
-            echo '<p class="fw-bold">'.'Pesanan Anda Belum dikonfirmasi'.'</p>';
+          $i = 1;
+          while ($row = $result->fetch_object()){ // fetch_object-> mengembalikan baris saat ini dari kumpulan hasil sebagai objek atau keluarasnfungsi mengembalikan baris saat ini 
+            echo '<div class="card m-3 p-2">';
+            echo '<p class="card-header fw-bold"> Pesanan ke:'.$i.'</p>';
+            echo '<div class="card-body">';
+            echo 'ID Pesanan: ' .$row->id_pesanan. '</br>';
+            echo 'Nama Pemesan: ' .$row->nama. '</br>';
+            echo 'Email Pemesan: ' .$row->email. '</br>';
+            echo 'Tipe Ruangan: ' .$row->id_tipe. '</br>';
+            echo 'Nomor Ruangan: ' .$row->no_ruang. '</br>';
+            if($row->status==0){
+              echo '<p class="fw-bold">'.'Pesanan Anda Belum dikonfirmasi'.'</p>';
+            }
+            else if($row->status==1){
+              echo '<p class="fw-bold">'.'Pesanan Anda Sudah dikonfirmasi'.'</p>';
+            }
+            else if($row->status==2){
+              echo '<p class="fw-bold">'.'Pesanan Anda Dibatalkan'.'</p>';
+            }
+            echo '</div>';
+            echo '</div>';
+            echo '</br>';
+            $i++;
           }
-          else if($data['status']==1){
-            echo '<p class="fw-bold">'.'Pesanan Anda Sudah dikonfirmasi'.'</p>';
-          }
-          else if($data['status']==2){
-            echo '<p class="fw-bold">'.'Pesanan Anda Dibatalkan'.'</p>';
-          }
-
         ?>
         </div>
         <div class="modal-footer">

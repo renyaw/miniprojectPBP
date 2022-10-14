@@ -44,13 +44,17 @@
             </div>
             <div class="card col-6">
               <div class="card mt-3">
-                <div class="text fw-bold fs-5 lh-lg">
+                <div class="text  fs-5 lh-lg">
                     <!-- ini buat masukin dari post -->
-                  <p class="fs-5 ms-2">Detail Pemesanan</p>
-
+                    <div class="card-header">
+                      <p class="fw-bold fs-5 ">Detail Pemesanan</p>
+                    </div>
+                    <div class="card-body">
                     <?php
+                    $scnama=$_POST['nama'];
+                    $scnama=ucwords(strtolower($scnama));
                     $email=$_SESSION['email'];
-                    $nama=test_input($_POST['nama']);
+                    $nama=test_input($scnama);
                     $tipe=test_input($_POST['tipe']);
                     $ruang=test_input($_POST['ruang']);
 
@@ -65,13 +69,13 @@
                     //memasukkan data dari login ke $data dalam bentuk array
                     $data=mysqli_fetch_assoc($result);
 
-                    echo '&nbsp;&nbsp;Email: '.$email.'</br>';
-                    echo '&nbsp;&nbsp;Nama: '.$nama.'</br>';
-                    echo '&nbsp;&nbsp;Tipe Ruangan: '.$data['nama_tipe'].'</br>';
-                    echo '&nbsp;&nbsp;Nomor Ruangan: '.$ruang.'</br>';
-                    echo '&nbsp;&nbsp;Harga: '.$data['harga'].'</br>';
+                    echo 'Email&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;: '.$email.'</br>';
+                    echo 'Nama&emsp;&emsp;&emsp;&ensp;&nbsp;&emsp;&nbsp;: '.$nama.'</br>';
+                    echo 'Tipe Ruangan&emsp;&ensp;: '.$data['nama_tipe'].'</br>';
+                    echo 'Nomor Ruangan&nbsp;: '.$ruang.'</br>';
+                    echo 'Harga&emsp;&emsp;&emsp;&ensp;&nbsp;&emsp;&nbsp;: Rp'.$data['harga'].'</br>';
                     ?>
-                    
+                    </div>
                 </div>
               </div>
                 <p>Upload Bukti Pembayaran</p>
