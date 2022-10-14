@@ -13,11 +13,11 @@
     <?php
     //Cek apakah sudah login atau belum
     session_start();
-    require_once('db_login.php');
-    if(empty($_SESSION['username'])){
-      header('Location:login.php?pesan=belumlogin');
+    require_once "db_login.php";
+    if (empty($_SESSION["username"])) {
+        header("Location:login.php?pesan=belumlogin");
     }
-    echo "logindengan" .$_SESSION['username'];
+    echo "logindengan" . $_SESSION["username"];
     ?>
     <!-- Navbar ye -->
     <nav class="navbar navbar-expand-lg fixed-top" style="background-color:#F1A661;">
@@ -28,10 +28,11 @@
         </a>
         <a class="navbar-brand fw-bold">
           <img src="img/online.png" width="10" class="d-inline-block align-text-middle">
-          <?php 
-                $uname=$_SESSION['username'];
-                $uname= ucfirst($uname);
-                echo $uname?>
+          <?php
+          $uname = $_SESSION["username"];
+          $uname = ucfirst($uname);
+          echo $uname;
+          ?>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -50,14 +51,16 @@
             <li class="nav-item">
               <a class="nav-link" href="#rsvp">RSVP</a>
             </li class="nav-item">
-            <?php 
-            $email=$_SESSION['email'];
+            <?php
+            $email = $_SESSION["email"];
             //ambil pesanan yang dimiliki customer
-            $query=$db->query("select * from pesanan where email='$email'");
+            $query = $db->query("select * from pesanan where email='$email'");
             //count row
-            $cek= mysqli_num_rows($query);
-            if($cek!=0){
-              echo '<button type="button" class="btn btn-link nav-link" data-toggle="modal" data-target="#exampleModal" ">' ."Status Pesanan".'</button>';
+            $cek = mysqli_num_rows($query);
+            if ($cek != 0) {
+                echo '<button type="button" class="btn btn-link nav-link" data-toggle="modal" data-target="#exampleModal" ">' .
+                    "Status Pesanan" .
+                    "</button>";
             }
             ?>
             <li class="nav-item">
@@ -81,34 +84,37 @@
         </div>
         <div class="modal-body">
         <?php
-          $email=$_SESSION['email'];
-          $result=$db->query("select * from pesanan where email='$email'");
+        $email = $_SESSION["email"];
+        $result = $db->query("select * from pesanan where email='$email'");
 
-          $data=mysqli_fetch_assoc($result);
-          $i = 1;
-          while ($row = $result->fetch_object()){ // fetch_object-> mengembalikan baris saat ini dari kumpulan hasil sebagai objek atau keluarasnfungsi mengembalikan baris saat ini 
+        $data = mysqli_fetch_assoc($result);
+        $i = 1;
+        while ($row = $result->fetch_object()) {
+            // fetch_object-> mengembalikan baris saat ini dari kumpulan hasil sebagai objek atau keluarasnfungsi mengembalikan baris saat ini
             echo '<div class="card m-3 p-2">';
-            echo '<p class="card-header fw-bold"> Pesanan ke:'.$i.'</p>';
+            echo '<p class="card-header fw-bold"> Pesanan ke:' . $i . "</p>";
             echo '<div class="card-body">';
-            echo 'ID Pesanan: ' .$row->id_pesanan. '</br>';
-            echo 'Nama Pemesan: ' .$row->nama. '</br>';
-            echo 'Email Pemesan: ' .$row->email. '</br>';
-            echo 'Tipe Ruangan: ' .$row->id_tipe. '</br>';
-            echo 'Nomor Ruangan: ' .$row->no_ruang. '</br>';
-            if($row->status==0){
-              echo '<p class="fw-bold">'.'Pesanan Anda Belum dikonfirmasi'.'</p>';
+            echo "ID Pesanan: " . $row->id_pesanan . "</br>";
+            echo "Nama Pemesan: " . $row->nama . "</br>";
+            echo "Email Pemesan: " . $row->email . "</br>";
+            echo "Tipe Ruangan: " . $row->id_tipe . "</br>";
+            echo "Nomor Ruangan: " . $row->no_ruang . "</br>";
+            if ($row->status == 0) {
+                echo '<p class="fw-bold">' .
+                    "Pesanan Anda Belum dikonfirmasi" .
+                    "</p>";
+            } elseif ($row->status == 1) {
+                echo '<p class="fw-bold">' .
+                    "Pesanan Anda Sudah dikonfirmasi" .
+                    "</p>";
+            } elseif ($row->status == 2) {
+                echo '<p class="fw-bold">' . "Pesanan Anda Dibatalkan" . "</p>";
             }
-            else if($row->status==1){
-              echo '<p class="fw-bold">'.'Pesanan Anda Sudah dikonfirmasi'.'</p>';
-            }
-            else if($row->status==2){
-              echo '<p class="fw-bold">'.'Pesanan Anda Dibatalkan'.'</p>';
-            }
-            echo '</div>';
-            echo '</div>';
-            echo '</br>';
+            echo "</div>";
+            echo "</div>";
+            echo "</br>";
             $i++;
-          }
+        }
         ?>
         </div>
         <div class="modal-footer">
@@ -229,13 +235,13 @@
                               <select class="form-control" name="tipe" id="tipe">
                                 <option value="0">-- Select Type --</option>
                                 <?php
-                                require_once('db_login.php');
-                                    $result = $db->query('select * from tipe');
+                                require_once "db_login.php";
+                                $result = $db->query("select * from tipe");
 
-                                    while ($data = $result->fetch_object()):
-                                  ?>
-                                    <option value="<?php echo $data->id_tipe ?>"><?php echo $data->nama_tipe ?></option>
-                                <?php endwhile ?>
+                                while ($data = $result->fetch_object()): ?>
+                                    <option value="<?php echo $data->id_tipe; ?>"><?php echo $data->nama_tipe; ?></option>
+                                <?php endwhile;
+                                ?>
                               </select>
                           </div>
                           <div class="form-group">
