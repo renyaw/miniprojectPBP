@@ -46,11 +46,11 @@
         <div class="row"> 
           <div class="col-3">
             <p>Status:</p>
-            <select name="status" id="status" class="form-control" onchange="showPesanan(this.value)">
+            <select name="status" id="status" class="" onchange="showPesanan(this.value)">
                     <option value="3">Semuanya</option>
-                    <option value="0">Belum Dikonfirmasi</option>
-                    <option value="1">Sudah Dikonfirmasi</option>
-                    <option value="2">Ditolak</option>
+                    <option value="0">Belum dikonfirmasi</option>
+                    <option value="1">Sudah dikonfirmasi</option>
+                    <option value="2">Dibatalkan</option>
             </select>
           </div>
         </div>

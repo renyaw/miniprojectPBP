@@ -103,11 +103,11 @@
                 echo '<p class="fw-bold">' .
                     "Pesanan Anda Belum dikonfirmasi" .
                     "</p>";
-            } elseif ($row->status == 1) {
+            } else if ($row->status == 1) {
                 echo '<p class="fw-bold">' .
                     "Pesanan Anda Sudah dikonfirmasi" .
                     "</p>";
-            } elseif ($row->status == 2) {
+            } else if ($row->status == 2) {
                 echo '<p class="fw-bold">' . "Pesanan Anda Dibatalkan" . "</p>";
             }
             echo "</div>";
