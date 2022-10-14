@@ -2,7 +2,7 @@
 // include our login information
 //session_start(); //menginisialilasi session lalu akan diteruskan ke get dan post
 require_once "db_login.php"; // memanggil halaman
-
+$id=$_GET['id'];
 //Klausa ORDER BY digunakan untuk mengurutkan hasil-set dalam urutan menaik atau menurun
 //sesuai status
 $query = "SELECT * FROM pesanan INNER JOIN tipe ON pesanan.id_tipe=tipe.id_tipe WHERE status='$id' ORDER BY id_pesanan ";
