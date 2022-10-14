@@ -11,14 +11,13 @@
   </head>
   <body style="background-color: #F1A661;">
     <?php
-
-      //session_start();
-      require_once('db_login.php');
-      if(isset($_GET['pesan'])){
-        if($_GET['pesan']=="berhasil"){
-          echo "<div class='alert alert-success text-center'>Data Berhasil tersimpan</div>";
+    //session_start();
+    require_once "db_login.php";
+    if (isset($_GET["pesan"])) {
+        if ($_GET["pesan"] == "berhasil") {
+            echo "<div class='alert alert-success text-center'>Data Berhasil tersimpan</div>";
         }
-      }
+    }
     ?>
     <section>
     <div class="container mt-5">
