@@ -14,10 +14,9 @@
     <?php
     //mengecek apakah user sebgai admin
     session_start();
-    if($_SESSION['username']!='admin'){
-      header('Location:login.php?pesan=bukanadmin');
+    if ($_SESSION["username"] != "admin") {
+        header("Location:login.php?pesan=bukanadmin");
     }
-
     ?>
     <!-- Navbar ye -->
     <nav class="navbar navbar-expand-lg fixed-top" style="background-color:#F1A661;">
