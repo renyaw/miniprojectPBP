@@ -93,11 +93,12 @@
                 </div>
             </div>
           </div>
-              <p>Upload Bukti Pembayaran</p>
+              
           <div class="">
+          <p>Upload Bukti Pembayaran</p>
               <div class="input-group mb-3">
-                  <input type="file" class="form-control" id="inputGroupFile02">
-                  <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                  
+                  <a href="https://bit.ly/BuktiBebekVoice" target="_blank"><button type="button" class="btn btn-secondary">Upload Bukti</button></a>
             </div>
           </div>
           <div class="d-md-flex justify-content-md-end mb-2">
