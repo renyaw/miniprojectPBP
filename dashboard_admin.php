@@ -29,6 +29,9 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
+          <li class="nav-item">
+            <a class="nav-link" href="login.php">Log Out</a>
+          </li>
         </div>
       </div>
     </nav>
