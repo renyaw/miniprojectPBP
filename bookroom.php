@@ -100,15 +100,15 @@
             echo "Tipe Ruangan: " . $row->id_tipe . "</br>";
             echo "Nomor Ruangan: " . $row->no_ruang . "</br>";
             if ($row->status == 0) {
-                echo '<p class="fw-bold">' .
+                echo '<p class="fw-bold text-primary">' .
                     "Pesanan Anda Belum dikonfirmasi" .
                     "</p>";
             } else if ($row->status == 1) {
-                echo '<p class="fw-bold">' .
+                echo '<p class="fw-bold text-success">' .
                     "Pesanan Anda Sudah dikonfirmasi" .
                     "</p>";
             } else if ($row->status == 2) {
-                echo '<p class="fw-bold">' . "Pesanan Anda Dibatalkan" . "</p>";
+                echo '<p class="fw-bold text-danger">' . "Pesanan Anda Dibatalkan" . "</p>";
             }
             echo "</div>";
             echo "</div>";
