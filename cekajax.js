@@ -78,20 +78,20 @@ email.onkeyup = function () {
 }
 
 username.onkeyup = function () {
-  var success = document.getElementById('username_success')
-  var xhr = new XMLHttpRequest();
+    var success = document.getElementById('username_success')
+    var xhr = new XMLHttpRequest();
 
-  xhr.open('GET', 'check_username.php?username=' + username.value)
+    xhr.open('GET', 'check_username.php?username=' + username.value)
 
-  xhr.onload = function () {
-      if (xhr.responseText == false) {
-          error('username', 'Username sudah dipakai')
-          success.style.display = 'none'
-      } else {
-          hideError('username')
-          success.style.display = 'block'
-      }
-  }
+    xhr.onload = function () {
+        if (xhr.responseText == false) {
+            error('username', 'Username sudah dipakai')
+            success.style.display = 'none';
+        } else {
+            hideError('username')
+            success.style.display = 'block'
+        }
+    }
 
-  xhr.send()
+    xhr.send()
 }
