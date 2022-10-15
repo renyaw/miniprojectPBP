@@ -99,6 +99,7 @@
             echo "Email Pemesan: " . $row->email . "</br>";
             echo "Tipe Ruangan: " . $row->id_tipe . "</br>";
             echo "Nomor Ruangan: " . $row->no_ruang . "</br>";
+            echo "<hr>";
             if ($row->status == 0) {
                 echo '<p class="fw-bold text-primary">' .
                     "Pesanan Anda Belum dikonfirmasi" .
