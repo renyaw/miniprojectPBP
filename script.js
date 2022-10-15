@@ -28,13 +28,6 @@ function error(id, error) {
     element.style.display = 'block'
 }
 
-function resetError() {
-    document.querySelectorAll('[id$="_error"]')
-        .forEach(function (element) {
-            element.style.display = 'none'
-        })
-}
-
 function callAjax(url, inner) {
     const xmlHttp = getXMLHttpRequest();
     xmlHttp.open("GET", url, true);

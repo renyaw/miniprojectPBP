@@ -97,6 +97,6 @@
         </div>
       </div>
     </div></section>
-    <script src="script.js"></script>  
+    <script src="cekajax.js"></script>  
   </body>
 </html>
