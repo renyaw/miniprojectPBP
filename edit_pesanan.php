@@ -46,6 +46,9 @@ if (!isset($_POST["submit"])) {
         if($status=='2'){
           $query2= $db->query("UPDATE ruang SET status = '0' WHERE no_ruang='$no_ruang'");
         }
+        else{
+          $query3= $db->query("UPDATE ruang SET status = '1' WHERE no_ruang='$no_ruang'");
+        }
         //execute the query
         $result = $db->query($query);
         if (!$result) {
