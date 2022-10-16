@@ -85,9 +85,8 @@
         <div class="modal-body">
         <?php
         $email = $_SESSION["email"];
-        $result = $db->query("select * from pesanan where email='$email'");
+        $result = $db->query("select * from pesanan INNER JOIN tipe ON pesanan.id_tipe=tipe.id_tipe where email='$email'");
 
-        $data = mysqli_fetch_assoc($result);
         $i = 1;
         while ($row = $result->fetch_object()) {
             // fetch_object-> mengembalikan baris saat ini dari kumpulan hasil sebagai objek atau keluarasnfungsi mengembalikan baris saat ini
@@ -97,7 +96,7 @@
             echo "ID Pesanan: " . $row->id_pesanan . "</br>";
             echo "Nama Pemesan: " . $row->nama . "</br>";
             echo "Email Pemesan: " . $row->email . "</br>";
-            echo "Tipe Ruangan: " . $row->id_tipe . "</br>";
+            echo "Tipe Ruangan: " . $row->nama_tipe . "</br>";
             echo "Nomor Ruangan: " . $row->no_ruang . "</br>";
             echo "<hr>";
             if ($row->status == 0) {
