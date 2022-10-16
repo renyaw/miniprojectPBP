@@ -45,10 +45,7 @@ if (!isset($_POST["submit"])) {
     if ($valid) {
         //asign a query
         $query =
-            "UPDATE pesanan SET status='" .
-            $status .
-            "'WHERE id_pesanan=" .
-            $id;
+            "UPDATE pesanan SET status='" .$status ."'WHERE id_pesanan=" .$id;
         //execute the query
         $result = $db->query($query);
         if (!$result) {
