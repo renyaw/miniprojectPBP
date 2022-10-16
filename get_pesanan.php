@@ -13,12 +13,12 @@ $query2 =
 //sort
 $sortR = $db->query($query);
 if (!$sortR) {
-    die("Could not the query the database: <br />" .$db->error ."<br>Query: " .$query);
+  die("Could not the query the database: <br />" .$db->error ."<br>Query: " .$query);
 }
 //default
 $defaultR = $db->query($query2);
 if (!$defaultR) {
-    die("Could not the query the database: <br />" .$db->error ."<br>Query: " .$query);
+  die("Could not the query the database: <br />" .$db->error ."<br>Query: " .$query);
 }
 echo '
   <table class="table table-hover table-striped">
@@ -58,12 +58,8 @@ while ($row = $result->fetch_object()) {
       echo '<td class="text-danger">' . "Dibatalkan" . "</td>";
     }
     echo '<td><a href="https://bit.ly/HasilbebekVoice" target="_blank" class="btn btn-success">Lihat</a></td>';
-    echo '<td><a class="btn btn-warning btn-sm" href="edit_pesanan.php?id=' .
-        $row->id_pesanan .
-        '">Edit</a>&nbsp;&nbsp;
-            <a class="btn btn-danger btn-sm" href="delete_pesanan.php?id=' .
-        $row->id_pesanan .
-        '">Delete</a>
+    echo '<td><a class="btn btn-warning btn-sm" href="edit_pesanan.php?id=' .$row->id_pesanan .'">Edit</a>&nbsp;&nbsp;
+            <a class="btn btn-danger btn-sm" href="delete_pesanan.php?id=' .$row->id_pesanan .'">Delete</a>
             </td>';
     echo "</tr>";
     $i++;
