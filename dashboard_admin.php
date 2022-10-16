@@ -81,11 +81,11 @@
         </div> 
         <div>
           <table class="table table-hover table-stripped">
-            <tr>
+            <tr class="bg-light">
             <th>Nomor Ruang</th>
             <th>ID Tipe</th>
             <th>Status</th>
-            <th>Action</th>
+            <!-- <th>Action</th> -->
             </tr>
               <?php
               require_once('db_login.php');
@@ -94,7 +94,14 @@
                 echo '<tr>';
                 echo "<td>" . $row->no_ruang . "</td>";
                 echo "<td>" . $row->id_tipe . "</td>";
-                echo "<td>" . $row->status . "</td>";
+                if ($row->status == 0) {
+                  echo '<td class="text-success fw-bold">' ."Tersedia"."</td>";
+                } 
+                else if ($row->status == 1) {
+                  echo '<td class="text-danger fw-bold">' ."Terisi" ."</td>";
+                } 
+                // echo '<td><a class="btn btn-warning btn-sm" href="edit_pesanan.php?id=' .$row->no_ruang .'">Edit</a>&nbsp;&nbsp;
+                // </td>';
                 echo '</tr>';
               }
               ?>
