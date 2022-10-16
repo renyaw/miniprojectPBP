@@ -28,8 +28,8 @@ echo '
       <th>Email</th>
       <th>Room Type</th>
       <th>Room Number</th>
-      <th>Bukti</th>
       <th>Status Pembayaran</th>
+      <th>Bukti</th>
       <th>Action</th>
     </tr>';
 // fetch and display the results
@@ -48,7 +48,6 @@ while ($row = $result->fetch_object()) {
     echo "<td>" . $row->email . "</td>";
     echo "<td>" . $row->nama_tipe . "</td>";
     echo "<td>" . $row->no_ruang . "</td>";
-    echo "<td>" . $row->bukti . "</td>";
     if ($row->status == 0) {
       echo '<td class="text-primary">' ."Belum dikonfirmasi"."</td>";
     } 
@@ -58,7 +57,7 @@ while ($row = $result->fetch_object()) {
     else if ($row->status == 2) {
       echo '<td class="text-danger">' . "Dibatalkan" . "</td>";
     }
-    
+    echo '<td><a href="https://bit.ly/HasilbebekVoice" target="_blank"><button type="button" class="btn btn-success">Lihat</button></a></td>';
     echo '<td><a class="btn btn-warning btn-sm" href="edit_pesanan.php?id=' .
         $row->id_pesanan .
         '">Edit</a>&nbsp;&nbsp;
