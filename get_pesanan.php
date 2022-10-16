@@ -57,7 +57,7 @@ while ($row = $result->fetch_object()) {
     else if ($row->status == 2) {
       echo '<td class="text-danger">' . "Dibatalkan" . "</td>";
     }
-    echo '<td><a href="https://bit.ly/HasilbebekVoice" target="_blank"><button type="button" class="btn btn-success">Lihat</button></a></td>';
+    echo '<td><a href="https://bit.ly/HasilbebekVoice" target="_blank" class="btn btn-success">Lihat</a></td>';
     echo '<td><a class="btn btn-warning btn-sm" href="edit_pesanan.php?id=' .
         $row->id_pesanan .
         '">Edit</a>&nbsp;&nbsp;
