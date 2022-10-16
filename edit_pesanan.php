@@ -36,16 +36,16 @@ if (!isset($_POST["submit"])) {
     if ($status == "") {
         $error_status = "Name is required";
         $valid = false;
-    } elseif (!preg_match("/^(0|[1-9][0-9])*$/", $name)) {
-        $error_status = "Only numbers allowed";
-        $valid = false;
     }
+
 
     //update data into database
     if ($valid) {
         //asign a query
-        $query =
-            "UPDATE pesanan SET status='" .$status ."'WHERE id_pesanan=" .$id;
+        $query = "UPDATE pesanan SET status='" .$status ."'WHERE id_pesanan=" .$id;
+        if($status=='2'){
+          $query2= $db->query("UPDATE ruang SET status = '0' WHERE no_ruang='$no_ruang'");
+        }
         //execute the query
         $result = $db->query($query);
         if (!$result) {
