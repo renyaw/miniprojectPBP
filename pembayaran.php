@@ -89,7 +89,7 @@
                     "</br>";
                 echo "Nomor Ruangan&nbsp;: " . $ruang . "</br>";
                 "</br>";
-                echo "Harga&emsp;&emsp;&emsp;&ensp;&nbsp;&emsp;&nbsp;: " .
+                echo "Harga&emsp;&emsp;&emsp;&ensp;&nbsp;&emsp;&nbsp;: Rp" .
                     $data["harga"] .
                     "</br>";
                 ?>
