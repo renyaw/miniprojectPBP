@@ -85,39 +85,37 @@
         <div class="modal-body">
         <?php
         $email = $_SESSION["email"];
-        $result = $db->query("select * from pesanan where email='$email'");
-        
+        $result = $db->query("select * from pesanan INNER JOIN tipe ON pesanan.id_tipe=tipe.id_tipe where email='$email'");
+
         $i = 1;
         while ($row = $result->fetch_object()) {
-          // fetch_object-> mengembalikan baris saat ini dari kumpulan hasil sebagai objek atau keluarasnfungsi mengembalikan baris saat ini
-          echo '<div class="card m-3 p-2">';
-          echo '<p class="card-header fw-bold"> Pesanan ke:' . $i . "</p>";
-          echo '<div class="card-body">';
-          echo "ID Pesanan: " . $row->id_pesanan . "</br>";
-          echo "Nama Pemesan: " . $row->nama . "</br>";
-          echo "Email Pemesan: " . $row->email . "</br>";
-          echo "Tipe Ruangan: " . $row->id_tipe . "</br>";
-          echo "Nomor Ruangan: " . $row->no_ruang . "</br>";
-          echo "<hr>";
-          if ($row->status == 0) {
-              echo '<p class="fw-bold text-primary">' .
-                  "Pesanan Anda Belum dikonfirmasi" .
-                  "</p>";
-          } else if ($row->status == 1) {
-              echo '<p class="fw-bold text-success">' .
-                  "Pesanan Anda Sudah dikonfirmasi" .
-                  "</p>";
-          } else if ($row->status == 2) {
-              echo '<p class="fw-bold text-danger">' . "Pesanan Anda Dibatalkan" . "</p>";
-          }
-          echo "</div>";
-          echo "</div>";
-          echo "</br>";
-          $i++;
-          $cek = mysqli_num_rows($result);
+            // fetch_object-> mengembalikan baris saat ini dari kumpulan hasil sebagai objek atau keluarasnfungsi mengembalikan baris saat ini
+            echo '<div class="card m-3 p-2">';
+            echo '<p class="card-header fw-bold"> Pesanan ke:' . $i . "</p>";
+            echo '<div class="card-body">';
+            echo "ID Pesanan: " . $row->id_pesanan . "</br>";
+            echo "Nama Pemesan: " . $row->nama . "</br>";
+            echo "Email Pemesan: " . $row->email . "</br>";
+            echo "Tipe Ruangan: " . $row->nama_tipe . "</br>";
+            echo "Nomor Ruangan: " . $row->no_ruang . "</br>";
+            echo "<hr>";
+            if ($row->status == 0) {
+                echo '<p class="fw-bold text-primary">' .
+                    "Pesanan Anda Belum dikonfirmasi" .
+                    "</p>";
+            } else if ($row->status == 1) {
+                echo '<p class="fw-bold text-success">' .
+                    "Pesanan Anda Sudah dikonfirmasi" .
+                    "</p>";
+            } else if ($row->status == 2) {
+                echo '<p class="fw-bold text-danger">' . "Pesanan Anda Dibatalkan" . "</p>";
+            }
+            echo "</div>";
+            echo "</div>";
+            echo "</br>";
+            $i++;
         }
-        ?> 
-        
+        ?>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
