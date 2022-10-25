@@ -60,7 +60,6 @@
                 $nama = test_input($scnama);
                 $tipe = test_input($_POST["tipe"]);
                 $ruang = test_input($_POST["ruang"]);
-
                 //insert into db
                 $input = $db->query(
                     "insert into pesanan(nama,email,no_ruang,id_tipe) values('$nama','$email','$ruang','$tipe')"
